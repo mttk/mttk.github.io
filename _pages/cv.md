@@ -13,7 +13,6 @@ Education
 ======
 * BSc & MSc at FER, University of Zagreb, 2012 & 2014
 * PhD at FER, University of Zagreb, 2019 (expected)
-  * Supervisor: Jan Šnajder
 
 Publications
 ======
