@@ -79,8 +79,8 @@ analytics:
 # Site Author
 author:
   name             : "Martin Tutek"
-  avatar           : "assets/img/profile.jpeg"
-  bio              : "PhD student @TakeLab FER, ML & NLP, building representations of words, sentences and their friends"
+  avatar           : "profile.jpeg"
+  bio              : "Building representations of words, sentences and their friends"
   location         : "Zagreb, Croatia"
   employer         : "FER @ UNIZG"
   googlescholar    : "https://scholar.google.hr/citations?user=3MK-3e0AAAAJ&hl=hr"
@@ -98,7 +98,7 @@ author:
   instagram        :
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
