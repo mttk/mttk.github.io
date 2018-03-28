@@ -11,9 +11,8 @@ redirect_from:
 
 Education
 ======
-* BSc at Faculty of Electrical Engineering and Computing, University of Zagreb, 2012
-* MSc at Faculty of Electrical Engineering and Computing, University of Zagreb, 2014
-* PhD at Faculty of Electrical Engineering and Computing, University of Zagreb, 2019 (expected)
+* BSc & MSc at FER, University of Zagreb, 2012 & 2014
+* PhD at FER, University of Zagreb, 2019 (expected)
   * Supervisor: Jan Šnajder
 
 Publications
@@ -29,7 +28,7 @@ Work experience
   * TakeLab, FER, University of Zagreb
 
 * Autumn 2014 - Autumn 2015: Trainee, Consultant
-  * Joint Research Centre, European Commission
+  * Joint Research Centre @ Ispra, European Commission
 
 Talks
 ======
