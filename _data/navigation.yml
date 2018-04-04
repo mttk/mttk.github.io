@@ -1,6 +1,6 @@
 # main links links
 main:
-    - title: "Paper Notes"
+  - title: "Paper Notes"
     url: /paper-notes/
     
   - title: "Publications"
