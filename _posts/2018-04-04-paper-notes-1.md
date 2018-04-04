@@ -1,7 +1,7 @@
 ---
 title: 'Regularizing and Optimizing LSTM Language Models'
-date: 2012-04-04
-permalink: /posts/2012/08/paper-notes-1/
+date: 2018-04-04
+permalink: /posts/2018/04/paper-notes-1/
 tags:
   - paper notes
   - category1
