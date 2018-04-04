@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I'm a 27 year old PhD student working in the intersection of machine learning and natural language processing, in an area called representation learning. 
+I'm Martin. I'm doing a PhD in the intersection of machine learning and natural language processing, in an area called representation learning.
 
-I'm trying to discover what the limitations of neural and distributed word and sentence representations are and find interpretable and efficient fixes.
+As literally every other person in this field, I write blog posts. They are usually notes on papers I read and find interesting. The notes are also sometimes interesting. Not often though.
