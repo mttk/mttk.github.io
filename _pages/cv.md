@@ -24,7 +24,7 @@ Publications
 Work experience
 ======
 * Spring 2016 - Current: Research Assistant
-  * TakeLab, FER, University of Zagreb
+  * TakeLab @ FER, University of Zagreb
 
 * Autumn 2014 - Autumn 2015: Trainee, Consultant
   * Joint Research Centre @ Ispra, European Commission
