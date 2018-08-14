@@ -4,10 +4,10 @@ main:
     url: /paper-notes/
 
   - title: "Teaching"
-    url: /teaching/    
+    url: /teaching/
     
   - title: "CV"
-    url: /cv/
+    url: /files/Tutek-Martin-CV-JAN-2018.pdf
     
   - title: "Publications"
     url: /publications/

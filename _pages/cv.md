@@ -29,9 +29,5 @@ Work experience
 * Autumn 2014 - Autumn 2015: Trainee, Consultant
   * Joint Research Centre @ Ispra, European Commission
 
-Talks
+Additional
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
