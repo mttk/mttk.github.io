@@ -11,4 +11,14 @@ author_profile: true
 
 {% include base_path %}
 
+**[Forthcoming] Tutek, M.**  & Šnajder, J. (2018). Iterative Recursive Attention Model for Interpretable Sequence Classification. In Proceedings of the 2017 EMNLP Workshop: Analyzing and interpreting neural networks for NLP.
 
+di Buono, M. P., Šnajder, J., Basic, B. D., Glavaš, G., **Tutek, M.**, & Milic-Frayling, N. (2017). Predicting news values from headline text and emotions. In Proceedings of the 2017 EMNLP Workshop: Natural Language Processing meets Journalism (pp. 1-6).
+
+Rotim, L., **Tutek, M.**, & Šnajder, J. (2017). TakeLab at SemEval-2017 Task 5: Linear aggregation of word embeddings for fine-grained sentiment analysis of financial news. In Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017) (pp. 866-871).
+
+di Buono, M. P., **Tutek, M.**, Šnajder, J., Glavaš, G., Bašić, B. D., & Milic-Frayling, N. (2017). Two Layers of Annotation for Representing Event Mentions in News Stories. In Proceedings of the 11th Linguistic Annotation Workshop (pp. 82-90).
+
+**Tutek, M.**, Glavas, G., Šnajder, J., Milić-Frayling, N., & Dalbelo Basic, B. (2016, October). Detecting and Ranking Conceptual Links between Texts Using a Knowledge Base. In Proceedings of the 25th ACM International on Conference on Information and Knowledge Management (pp. 2077-2080). ACM.
+
+**Tutek, M.**, Sekulic, I., Gombar, P., Paljak, I., Culinovic, F., Boltuzic, F., ... & Šnajder, J. (2016). Takelab at semeval-2016 task 6: stance classification in tweets using a genetic algorithm based ensemble. In Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016) (pp. 464-468).
