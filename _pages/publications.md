@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-1. *[Forthcoming]* **Tutek, M.**  & Šnajder, J. (2018). Iterative Recursive Attention Model for Interpretable Sequence Classification. In Proceedings of the 2017 EMNLP Workshop: Analyzing and interpreting neural networks for NLP.
+1. *[Forthcoming]* **Tutek, M.**  & Šnajder, J. (2018). Iterative Recursive Attention Model for Interpretable Sequence Classification. In Proceedings of the 2018 EMNLP Workshop: Analyzing and interpreting neural networks for NLP.
 
 2. di Buono, M. P., Šnajder, J., Basic, B. D., Glavaš, G., **Tutek, M.**, & Milic-Frayling, N. (2017). Predicting news values from headline text and emotions. In Proceedings of the 2017 EMNLP Workshop: Natural Language Processing meets Journalism (pp. 1-6).
 
