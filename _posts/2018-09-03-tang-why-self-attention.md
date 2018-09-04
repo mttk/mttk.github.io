@@ -25,7 +25,7 @@ _An empirical comparison of recurrent and non-recurrent architectures on a diagn
 
 Transformer networks aren't perfect. The results, however are not a massive problem for them - at _best_ recurrent models are equal or slightly better.
 
-Transformers do WSD **much** better than recurrent models. Does this mean that WSD does not _require_ knowledge of ordering (can we stress test this? _"... give gold for a drink at the bar ..." vs "..._give a gold bar for a drink at the_ ...")? Or is positional hashing simply _that_ good (doubtfully)? Are recurrent networks simply _that_ bad at retaining useful information?
+Transformers do WSD **much** better than recurrent models. Does this mean that WSD does not _require_ knowledge of ordering (can we stress test this? _"... give gold for a drink at the **bar** ..." vs "..._give a gold **bar** for a drink at the_ ...")? Or is positional hashing simply _that_ good (doubtfully)? Are recurrent networks simply _that_ bad at retaining useful information?
 
 ## Paper summary
 
