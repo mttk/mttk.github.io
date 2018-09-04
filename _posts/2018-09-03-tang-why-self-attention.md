@@ -12,7 +12,7 @@ _An empirical comparison of recurrent and non-recurrent architectures on a diagn
 
 **By:** Tang, G., Müller, M., Rios, A., & Sennrich, R. (2018). [\[**arxiv**\]](https://arxiv.org/abs/1808.08946).
 
-### Bullet summary
+## Bullet summary
 
 - Transformer models are competetive with, but do not outperform recurrent models _on the subject-verb agreement task_
 - The number of heads in Transformer multi-head attention strongly affects the ability of long-term dependency modelling
