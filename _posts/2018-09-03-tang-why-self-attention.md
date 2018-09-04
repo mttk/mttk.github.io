@@ -10,7 +10,7 @@ tags:
 
 _An empirical comparison of recurrent and non-recurrent architectures on a diagnostic sample of downstream tasks._
 
-**By:** Tang, G., Müller, M., Rios, A., & Sennrich, R. (2018). [\[**arxiv**\]](https://arxiv.org/abs/1808.08946).
+**By:** Tang, G., Müller, M., Rios, A., & Sennrich, R. (2018). [\[**arxiv**\]](https://arxiv.org/abs/1808.08946)
 
 ## Bullet summary
 
