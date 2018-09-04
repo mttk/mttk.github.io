@@ -10,7 +10,7 @@ tags:
 
 Empirical comparison of recurrent and non-recurrent architectures on a diagnostic sample of downstream tasks.
 
-Tang, G., Müller, M., Rios, A., & Sennrich, R. (2018). Why Self-Attention? A Targeted Evaluation of Neural Machine Translation Architectures. [link](https://arxiv.org/abs/1808.08946)
+Tang, G., Müller, M., Rios, A., & Sennrich, R. (2018). [Why Self-Attention? A Targeted Evaluation of Neural Machine Translation Architectures](https://arxiv.org/abs/1808.08946).
 
 ## Takeaways
 
@@ -27,7 +27,7 @@ In recent work, non-recurrent architectures are becoming increasingly competetiv
 
 ## Experimental setup
 
-The authors first train all models on the WMT17 (EN-DE) translation task and demonstrate comparable performance w.r.t. Bleu, with Transformer in the lead. To evaluate the performance of the trained _translation_ models on subject-verb-agreement and word sense disambiguation tasks, they adopt a _contrastive_ scheme. In this scheme, each test example is associated with a _correct_ translation and a closely related, but erroneous translation dubbed the _contrastive variant_. The decision of the model is correct if it assigns a higher score to the correct sentence. This setup is meant _"to test the sensitivity of NMT [neural machine translation] models  to  specific  translation  errors"_. 
+The authors first train all models on the [WMT17](http://www.statmt.org/wmt17/translation-task.html) (EN-DE) translation task and demonstrate comparable performance w.r.t. Bleu, with Transformer in the lead. To evaluate the performance of the trained _translation_ models on subject-verb-agreement and word sense disambiguation tasks, they adopt a _contrastive_ scheme. In this scheme, each test example is associated with a _correct_ translation and a closely related, but erroneous translation dubbed the _contrastive variant_. The decision of the model is correct if it assigns a higher score to the correct sentence. This setup is meant _"to test the sensitivity of NMT [neural machine translation] models  to  specific  translation  errors"_. 
 
 An example of the contrastive setup for subject-verb agreement:
 
@@ -37,7 +37,7 @@ An example of the contrastive setup for subject-verb agreement:
 
 Similarly, for word sense disambiguation, the correct _translation_ meaning of an ambiguous word is replaced with the other sense. _Schlange_, as a German source word with the correct translation _line_ is replaced with other translations such as _snake_ or _serpent_. 
 
-Essentially, a model trained on machine translation has to produce a higher score for the correct translation. The contrastive setup is a neat way to conduct a probing experiment whether a trained network effectively models a linguistic phenomenon. The datasets used are _Lingeval97_ for subject-verb agreement and _ContraWSD_ for word sense disambiguation.
+Essentially, a model trained on machine translation has to produce a higher score for the correct translation. The contrastive setup is a neat way to conduct a probing experiment whether a trained network effectively models a linguistic phenomenon. The datasets used are [_Lingeval97_](https://github.com/rsennrich/lingeval97) for subject-verb agreement and [_ContraWSD_](https://github.com/a-rios/ContraWSD) for word sense disambiguation.
 
 ## Experimental results
 
@@ -51,10 +51,10 @@ The transformer model strongly outperforms other networks for word sense disambi
 
 ## References
 
-[1] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in Neural Information Processing Systems (pp. 5998-6008).
+[1] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). [Attention is all you need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf). In Advances in Neural Information Processing Systems (pp. 5998-6008).
 
-[2] Gehring, J., Auli, M., Grangier, D., Yarats, D., & Dauphin, Y. N. (2017, July). Convolutional Sequence to Sequence Learning. In International Conference on Machine Learning (pp. 1243-1252).
+[2] Gehring, J., Auli, M., Grangier, D., Yarats, D., & Dauphin, Y. N. (2017, July). [Convolutional Sequence to Sequence Learning](https://arxiv.org/abs/1705.03122). In International Conference on Machine Learning (pp. 1243-1252).
 
-[3] Tran, K., Bisazza, A., & Monz, C. (2018). The Importance of Being Recurrent for Modeling Hierarchical Structure. arXiv preprint arXiv:1803.03585.
+[3] Tran, K., Bisazza, A., & Monz, C. (2018). [The Importance of Being Recurrent for Modeling Hierarchical Structure](https://arxiv.org/abs/1803.03585). arXiv preprint arXiv:1803.03585.
 
-[4] Chen, M. X., Firat, O., Bapna, A., Johnson, M., Macherey, W., Foster, G., ... & Wu, Y. (2018). The Best of Both Worlds: Combining Recent Advances in Neural Machine Translation. arXiv preprint arXiv:1804.09849.
+[4] Chen, M. X., Firat, O., Bapna, A., Johnson, M., Macherey, W., Foster, G., ... & Wu, Y. (2018). [The Best of Both Worlds: Combining Recent Advances in Neural Machine Translation](http://aclweb.org/anthology/P18-1008). arXiv preprint arXiv:1804.09849.
