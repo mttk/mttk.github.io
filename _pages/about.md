@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm Martin. I'm doing a PhD in the intersection of machine learning and natural language processing, in an area called representation learning. This site is still under construction.
+I'm a third year PhD student at the [Text Analysis and Knowledge Engineering Lab](http://takelab.fer.hr/) at the University of Zagreb, supervised by [Jan Šnajder](http://www.zemris.fer.hr/~jan/).
 
 What interests me are recurrent models for processing natural language data and distributed representations of words. In one hand, there's some obvious issues with how recurrent models process text, making it easy to approximate them or even beat their performance with fully connected nets **[1]** or even standard linear models (nbSVM). On the other hand, the standard word representations we use assume that each word can be represented with a single fixed dimensionality vector -- ignoring polysemy **[2]** and the difference in information value between function and content words.
 
