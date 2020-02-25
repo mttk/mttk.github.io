@@ -8,13 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-I'm a third year PhD student at the [Text Analysis and Knowledge Engineering Lab](http://takelab.fer.hr/) at the University of Zagreb, supervised by [Jan Šnajder](http://www.zemris.fer.hr/~jan/).
+I'm a fourth year PhD student in NLP at the [Text Analysis and Knowledge Engineering Lab](http://takelab.fer.hr/) at the University of Zagreb, supervised by [Jan Šnajder](http://www.zemris.fer.hr/~jan/).
 
-What interests me are recurrent models for processing natural language data and distributed representations of words. In one hand, there's some obvious issues with how recurrent models process text, making it easy to approximate them or even beat their performance with fully connected nets **[1]** or even standard linear models (nbSVM). On the other hand, the standard word representations we use assume that each word can be represented with a single fixed dimensionality vector -- ignoring polysemy **[2]** and the difference in information value between function and content words.
+My interests lie in the intersection of sparsity and interpretability. I'm motivated by work of Arora et al (1.) which demonstrates that a set of core meaning representations (linguistic atoms) can be learned from an embedding matrix. Through sharing of these representations, models can become interpretable among other benefits. I'm interested in making the learning process online and apt for modern NLP systems. Apart from that, I'm interested in interpretability of modern NLP models and to which extent is a model being interepretable a valid bias in model selection.
 
-What I work on is improving both the input representations so that recurrent models have an easier task, and identifying and alleviating problems that cause recurrent, _infinite context_ models to not outeperform fixed (or zero) context models.
+I'm also very interested in traffic flow optimization.
 
-
-1. Miller, J., & Hardt, M. (2018). When Recurrent Models Don't Need To Be Recurrent. arXiv preprint arXiv:1805.10369.
-
-2. Arora, Sanjeev, et al. "Linear algebraic structure of word senses, with applications to polysemy." Transactions of the Association of Computational Linguistics 6 (2018): 483-495.
+1. Arora, Sanjeev, et al. "Linear algebraic structure of word senses, with applications to polysemy." Transactions of the Association of Computational Linguistics 6 (2018): 483-495.
