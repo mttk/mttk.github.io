@@ -117,6 +117,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - podium
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
