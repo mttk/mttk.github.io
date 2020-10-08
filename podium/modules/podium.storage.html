@@ -1,0 +1,2606 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.storage package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.storage.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.storage.resources package" href="podium.storage.resources.html" />
+    <link rel="prev" title="podium.preproc.stemmer package" href="podium.preproc.stemmer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.storage.resources.html" title="podium.storage.resources package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.stemmer.html" title="podium.preproc.stemmer package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" accesskey="U">podium package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-storage-package">
+<h1>podium.storage package<a class="headerlink" href="#podium-storage-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="podium.storage.resources.html">podium.storage.resources package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.resources.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.resources.html#module-podium.storage.resources.downloader">podium.storage.resources.downloader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.resources.html#module-podium.storage.resources.large_resource">podium.storage.resources.large_resource module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.resources.html#module-podium.storage.resources.util">podium.storage.resources.util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.resources.html#module-podium.storage.resources">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="podium.storage.vectorizers.html">podium.storage.vectorizers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.vectorizers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.vectorizers.html#module-podium.storage.vectorizers.tfidf">podium.storage.vectorizers.tfidf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.vectorizers.html#module-podium.storage.vectorizers.vectorizer">podium.storage.vectorizers.vectorizer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="podium.storage.vectorizers.html#module-podium.storage.vectorizers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.storage.example_factory">
+<span id="podium-storage-example-factory-module"></span><h2>podium.storage.example_factory module<a class="headerlink" href="#module-podium.storage.example_factory" title="Permalink to this headline">¶</a></h2>
+<p>Module containing the Example Factory method used to dynamically create example
+classes used for storage in Dataset classes</p>
+<dl class="class">
+<dt id="podium.storage.example_factory.Example">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.example_factory.</code><code class="sig-name descname">Example</code><span class="sig-paren">(</span><em class="sig-param">fieldnames</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.Example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Method models one example with fields that hold
+(raw, tokenized) values and special fields with “_”
+at the end that can cache numericalized values</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.example_factory.ExampleFactory">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.example_factory.</code><code class="sig-name descname">ExampleFactory</code><span class="sig-paren">(</span><em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class used to create Example instances. Every ExampleFactory dynamically creates
+its own example class definition optimised for the fields provided in __init__.</p>
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.create_empty_example">
+<code class="sig-name descname">create_empty_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.create_empty_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates empty example with field names stored in example factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>example</strong> – empty Example instance with initialized field names</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.from_csv">
+<code class="sig-name descname">from_csv</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">field_to_index=None</em>, <em class="sig-param">delimiter='</em>, <em class="sig-param">'</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Example from a CSV line and a corresponding
+list or dict of Fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>str</em>) – A string containing a single row of values separated by the
+given delimiter.</p></li>
+<li><p><strong>field_to_index</strong> (<em>dict</em>) – A dict that maps column names to their indices in the line of data.
+Only needed if fields is a dict, otherwise ignored.</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – The delimiter that separates the values in the line of data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An Example whose attributes are the given Fields created with the
+given column values. These Fields can be accessed by their names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.from_dict">
+<code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates example from data in dictionary format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>object</em><em>)</em>) – dictionary that maps field name to field value</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>example</strong> – example instance with given data saved to fields</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.from_fields_tree">
+<code class="sig-name descname">from_fields_tree</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">subtrees=False</em>, <em class="sig-param">label_transform=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.from_fields_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Example (or multiple Examples) from a string
+representing an nltk tree and a list of corresponding values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>str</em>) – A string containing an nltk tree whose values are to be mapped
+to Fields.</p></li>
+<li><p><strong>subtrees</strong> (<em>bool</em>) – A flag denoting whether an example will be created from every
+subtree in the tree (when set to True), or just from the whole
+tree (when set to False).</p></li>
+<li><p><strong>label_transform</strong> (<em>callable</em>) – A function which converts the tree labels to a string representation,
+if wished. Useful for converting multiclass tasks to binary (SST) and
+making labels verbose. If None, the labels are not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>If subtrees was False, returns an Example whose attributes are
+the given Fields created with the given column values.
+These Fields can be accessed by their names.</p>
+<p>If subtrees was True, returns a list of such Examples for every
+subtree in the given tree.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Example | list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.from_json">
+<code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Example from a JSON object and the
+corresponding fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – A string containing a single JSON object
+(key-value pairs surrounded by curly braces).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An Example whose attributes are the given Fields created with the
+given column values. These Fields can be accessed by their names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If JSON doesn’t contain key name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.from_list">
+<code class="sig-name descname">from_list</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.from_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates example from data in list format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>list</em>) – list containing values for fields in order that the fields were given to
+example factory</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>example</strong> – example instance with given data saved to fields</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.example_factory.ExampleFactory.from_xml_str">
+<code class="sig-name descname">from_xml_str</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.ExampleFactory.from_xml_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates and Example from xml string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – XML formated string that contains the values of a single data
+instance, that are to be mapped to Fields.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An Example whose attributes are the given Fields created with the
+given column values. These Fields can be accessed by their names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the name is not contained in the xml string.</p></li>
+<li><p><strong>ParseError</strong> – If there was a problem while parsing xml sting, invalid xml.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.example_factory.ExampleFormat">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.example_factory.</code><code class="sig-name descname">ExampleFormat</code><a class="headerlink" href="#podium.storage.example_factory.ExampleFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.example_factory.set_example_attributes">
+<code class="sig-prename descclassname">podium.storage.example_factory.</code><code class="sig-name descname">set_example_attributes</code><span class="sig-paren">(</span><em class="sig-param">example</em>, <em class="sig-param">field</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.set_example_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method sets example attributes with given values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>example</strong> (<em>Example</em>) – example instance to which we are setting attributes</p></li>
+<li><p><strong>field</strong> (<em>(</em><em>Field|tuple</em><em>(</em><em>Field</em><em>)</em><em>)</em>) – field instance or instances that we are mapping</p></li>
+<li><p><strong>val</strong> (<em>str</em>) – field value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.example_factory.tree_to_list">
+<code class="sig-prename descclassname">podium.storage.example_factory.</code><code class="sig-name descname">tree_to_list</code><span class="sig-paren">(</span><em class="sig-param">tree</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.example_factory.tree_to_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method joins tree leaves and label in one list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tree</strong> (<em>tree</em>) – nltk tree instance</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tree_list</strong> – tree represented as list with its label</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.storage.field">
+<span id="podium-storage-field-module"></span><h2>podium.storage.field module<a class="headerlink" href="#module-podium.storage.field" title="Permalink to this headline">¶</a></h2>
+<p>Module contains dataset’s field definition and methods for construction.</p>
+<dl class="class">
+<dt id="podium.storage.field.Field">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.field.</code><code class="sig-name descname">Field</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">tokenizer='split'</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">tokenize=True</em>, <em class="sig-param">store_as_raw=False</em>, <em class="sig-param">store_as_tokenized=False</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">is_numericalizable=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">padding_token=-999</em>, <em class="sig-param">is_target=False</em>, <em class="sig-param">fixed_length=None</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the preprocessing and numericalization logic for a single
+field of a dataset.</p>
+<dl class="method">
+<dt id="podium.storage.field.Field.__getstate__">
+<code class="sig-name descname">__getstate__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.__getstate__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains field state. It is used for pickling dataset data
+to file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>state</strong> – dataset state dictionary</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.__setstate__">
+<code class="sig-name descname">__setstate__</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.__setstate__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method sets field state. It is used for unpickling dataset data
+from file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>dict</em>) – dataset state dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.add_posttokenize_hook">
+<code class="sig-name descname">add_posttokenize_hook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.add_posttokenize_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a post-tokenization hook to the Field.
+If multiple hooks are added to the field, the order of their execution
+will be the same as the order in which they were added to the field,
+each subsequent hook taking the output of the previous hook as its
+input.
+If the same function is added to the Field as a hook multiple times,
+it will be executed that many times.
+Post-tokenization hooks are called only if the Field is sequential
+(in non-sequential fields there is no tokenization and only
+pre-tokenization hooks are called).
+The output of the final post-tokenization hook are the raw and
+tokenized data that the preprocess function will use to produce its
+result.</p>
+<dl class="simple">
+<dt>Posttokenize hooks have the following outline:</dt><dd><dl class="simple">
+<dt>func post_tok_hook(raw_data, tokenized_data):</dt><dd><p>raw_out, tokenized_out = do_stuff(raw_data, tokenized_data)
+return raw_out, tokenized_out</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>where ‘tokenized_data’ is and ‘tokenized_out’ should be an iterable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hook</strong> (<em>callable</em>) – The post-tokenization hook that we want to add to the field.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>If field is declared as non numericalizable.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.add_pretokenize_hook">
+<code class="sig-name descname">add_pretokenize_hook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.add_pretokenize_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a pre-tokenization hook to the Field.
+If multiple hooks are added to the field, the order of their execution
+will be the same as the order in which they were added to the field,
+each subsequent hook taking the output of the previous hook as its
+input.
+If the same function is added to the Field as a hook multiple times,
+it will be executed that many times.
+The output of the final pre-tokenization hook is the raw data that the
+tokenizer will get as its input.</p>
+<dl class="simple">
+<dt>Pretokenize hooks have the following signature:</dt><dd><dl class="simple">
+<dt>func pre_tok_hook(raw_data):</dt><dd><p>raw_data_out = do_stuff(raw_data)
+return raw_data_out</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>This can be used to eliminate encoding errors in data, replace numbers
+and names, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hook</strong> (<em>callable</em>) – The pre-tokenization hook that we want to add to the field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signals that this field’s vocab can be built.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.finalized">
+<em class="property">property </em><code class="sig-name descname">finalized</code><a class="headerlink" href="#podium.storage.field.Field.finalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the field’s Vocab vas finalized. If the field has no
+vocab, returns True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether the field’s Vocab vas finalized. If the field has no
+vocab, returns True.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.get_default_value">
+<code class="sig-name descname">get_default_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.get_default_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains default field value for missing data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The index of the missing data token, if this field is numericalizable.
+None value otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>missing_symbol index or None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If missing data is not allowed in this field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.get_numericalization_for_example">
+<code class="sig-name descname">get_numericalization_for_example</code><span class="sig-paren">(</span><em class="sig-param">example</em>, <em class="sig-param">cache=True</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.get_numericalization_for_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the numericalized data of this field for the provided example.
+The numericalized data is generated and cached in the example if ‘cache’ is true
+and the cached data is not already present. If already cached, the cached data is
+returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>example</strong> (<em>Example</em>) – example to get numericalized data for.</p></li>
+<li><p><strong>cache</strong> (<em>bool</em>) – whether to store the cache the calculated numericalization if not already
+cached</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>numericalized data</strong> – The numericalized data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.get_output_fields">
+<code class="sig-name descname">get_output_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.get_output_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Iterable of the contained output fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an Iterable of the contained output fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.numericalize">
+<code class="sig-name descname">numericalize</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.numericalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numericalize the already preprocessed data point based either on
+the vocab that was previously built, or on a custom numericalization
+function, if the field doesn’t use a vocab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>hashable</em><em>, </em><em>iterable</em><em>(</em><em>hashable</em><em>)</em><em>)</em>) – Tuple of (raw, tokenized) of preprocessed input data. If the field
+is sequential, ‘raw’ is ignored and can be None. Otherwise,
+‘sequential’ is ignored and can be None.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Array of stoi indexes of the tokens, if data exists.
+None, if data is missing and missing data is allowed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If data is None and missing data is not allowed in this field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.pad_to_length">
+<code class="sig-name descname">pad_to_length</code><span class="sig-paren">(</span><em class="sig-param">row</em>, <em class="sig-param">length</em>, <em class="sig-param">custom_pad_symbol=None</em>, <em class="sig-param">pad_left=False</em>, <em class="sig-param">truncate_left=False</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.pad_to_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either pads the given row with pad symbols, or truncates the row
+to be of given length. The vocab provides the pad symbol for all
+fields that have vocabs, otherwise the pad symbol has to be given as
+a parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>np.ndarray</em>) – The row of numericalized data that is to be padded / truncated.</p></li>
+<li><p><strong>length</strong> (<em>int</em>) – The desired length of the row.</p></li>
+<li><p><strong>custom_pad_symbol</strong> (<em>int</em>) – The pad symbol that is to be used if the field doesn’t have a
+vocab. If the field has a vocab, this parameter is ignored and can
+be None.</p></li>
+<li><p><strong>pad_left</strong> (<em>bool</em>) – If True padding will be done on the left side, otherwise on the
+right side. Default: False.</p></li>
+<li><p><strong>truncate_left</strong> (<em>bool</em>) – If True field will be trucated on the left side, otherwise on the
+right side. Default: False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the field doesn’t use a vocab and no custom pad symbol was
+    given.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.preprocess">
+<code class="sig-name descname">preprocess</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocesses raw data, tokenizing it if the field is sequential,
+updating the vocab if the field is eager and preserving the raw data
+if field’s ‘store_raw’ is true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em><em> or </em><em>iterable</em><em>(</em><em>hashable</em><em>)</em>) – The raw data that needs to be preprocessed.
+String if ‘store_as_raw’ and/or ‘tokenize’ attributes are True.
+iterable(hashable) if store_as_tokenized attribute is True.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple of (raw, tokenized). If the field’s ‘store_as_raw’
+attribute is False, then ‘raw’ will be None (we don’t preserve
+the raw data). If field’s ‘tokenize’ and ‘store_as_tokenized’
+attributes are False then ‘tokenized’ will be None.
+The attributes ‘store_as_raw’, ‘store_as_tokenized’ and ‘tokenize’
+will never all be False, so the function will never return (None, None).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(str, Iterable(hashable))</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>If data is None and missing data is not allowed.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.remove_posttokenize_hooks">
+<code class="sig-name descname">remove_posttokenize_hooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.remove_posttokenize_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the post-tokenization hooks that were added to the Field.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.remove_pretokenize_hooks">
+<code class="sig-name descname">remove_pretokenize_hooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.remove_pretokenize_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the pre-tokenization hooks that were added to the Field.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.update_vocab">
+<code class="sig-name descname">update_vocab</code><span class="sig-paren">(</span><em class="sig-param">raw</em>, <em class="sig-param">tokenized</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.Field.update_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the vocab with a data point in its raw and tokenized form.
+If the field is sequential, the vocab is updated with the tokenized
+form (and ‘raw’ can be None), otherwise the raw form is used to
+update (and ‘tokenized’ can be None).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> (<em>hashable</em>) – The raw form of the data point that the vocab is to be updated
+with. If the field is sequential, this parameter is ignored and
+can be None.</p></li>
+<li><p><strong>tokenized</strong> (<em>iterable</em><em>(</em><em>hashable</em><em>)</em>) – The tokenized form of the data point that the vocab is to be
+updated with. If the field is NOT sequential
+(‘store_as_tokenized’ and ‘tokenize’ attributes are False),
+this parameter is ignored and can be None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.Field.use_vocab">
+<em class="property">property </em><code class="sig-name descname">use_vocab</code><a class="headerlink" href="#podium.storage.field.Field.use_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>A flag that tells whether the field uses a vocab or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether the field uses a vocab or not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.field.LabelField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.field.</code><code class="sig-name descname">LabelField</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.LabelField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.field.Field" title="podium.storage.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.field.Field</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.field.MultilabelField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.field.</code><code class="sig-name descname">MultilabelField</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">num_of_classes=None</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultilabelField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.field.TokenizedField" title="podium.storage.field.TokenizedField"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.field.TokenizedField</span></code></a></p>
+<p>Class used for storing pre-tokenized labels.
+Used for multilabeled datasets.</p>
+<dl class="method">
+<dt id="podium.storage.field.MultilabelField.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultilabelField.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signals that this field’s vocab can be built.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.field.MultioutputField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.field.</code><code class="sig-name descname">MultioutputField</code><span class="sig-paren">(</span><em class="sig-param">output_fields</em>, <em class="sig-param">tokenizer='split'</em>, <em class="sig-param">language='en'</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultioutputField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Field that does pretokenization and tokenization once and passes it to its
+output fields. Output fields are any type of field. The output fields are used only
+for posttokenization processing (posttokenization hooks and vocab updating).</p>
+<dl class="method">
+<dt id="podium.storage.field.MultioutputField.add_output_field">
+<code class="sig-name descname">add_output_field</code><span class="sig-paren">(</span><em class="sig-param">field</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultioutputField.add_output_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the passed field to this field’s output fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>field</strong> (<em>Field</em>) – Field to add to output fields.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.MultioutputField.add_pretokenize_hook">
+<code class="sig-name descname">add_pretokenize_hook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultioutputField.add_pretokenize_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a pre-tokenization hook to the MultioutputField.
+If multiple hooks are added to the field, the order of their execution
+will be the same as the order in which they were added to the field,
+each subsequent hook taking the output of the previous hook as its
+input.
+If the same function is added to the Field as a hook multiple times,
+it will be executed that many times.
+The output of the final pre-tokenization hook is the raw data that the
+tokenizer will get as its input.</p>
+<dl class="simple">
+<dt>Pretokenize hooks have the following signature:</dt><dd><dl class="simple">
+<dt>func pre_tok_hook(raw_data):</dt><dd><p>raw_data_out = do_stuff(raw_data)
+return raw_data_out</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>This can be used to eliminate encoding errors in data, replace numbers
+and names, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hook</strong> (<em>callable</em>) – The pre-tokenization hook that we want to add to the field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.MultioutputField.get_output_fields">
+<code class="sig-name descname">get_output_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultioutputField.get_output_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Iterable of the contained output fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an Iterable of the contained output fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.field.MultioutputField.remove_pretokenize_hooks">
+<code class="sig-name descname">remove_pretokenize_hooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.MultioutputField.remove_pretokenize_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the pre-tokenization hooks that were added to the MultioutputField.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.field.TokenizedField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.field.</code><code class="sig-name descname">TokenizedField</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">padding_token=-999</em>, <em class="sig-param">is_target=False</em>, <em class="sig-param">fixed_length=None</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.TokenizedField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.field.Field" title="podium.storage.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.field.Field</span></code></a></p>
+<p>Tokenized version of the Field. Holds the preprocessing and
+numericalization logic for the pre-tokenized dataset fields.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.field.unpack_fields">
+<code class="sig-prename descclassname">podium.storage.field.</code><code class="sig-name descname">unpack_fields</code><span class="sig-paren">(</span><em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.field.unpack_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flattens the given fields object into a flat list of fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>(</em><em>list | dict</em><em>)</em>) – List or dict that can contain nested tuples and None as values and
+column names as keys (dict).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A flat list of Fields found in the given ‘fields’ object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[Field]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.storage.vocab">
+<span id="podium-storage-vocab-module"></span><h2>podium.storage.vocab module<a class="headerlink" href="#module-podium.storage.vocab" title="Permalink to this headline">¶</a></h2>
+<p>Module contains classes related to the vocabulary.</p>
+<dl class="class">
+<dt id="podium.storage.vocab.SpecialVocabSymbols">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vocab.</code><code class="sig-name descname">SpecialVocabSymbols</code><a class="headerlink" href="#podium.storage.vocab.SpecialVocabSymbols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Class for special vocabular symbols</p>
+<dl class="attribute">
+<dt id="podium.storage.vocab.SpecialVocabSymbols.UNK">
+<code class="sig-name descname">UNK</code><a class="headerlink" href="#podium.storage.vocab.SpecialVocabSymbols.UNK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tag for unknown word</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.vocab.SpecialVocabSymbols.PAD">
+<code class="sig-name descname">PAD</code><a class="headerlink" href="#podium.storage.vocab.SpecialVocabSymbols.PAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>TAG for padding symbol</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.vocab.Vocab">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vocab.</code><code class="sig-name descname">Vocab</code><span class="sig-paren">(</span><em class="sig-param">max_size=None</em>, <em class="sig-param">min_freq=1</em>, <em class="sig-param">specials=(&lt;SpecialVocabSymbols.UNK: '&lt;unk&gt;'&gt;</em>, <em class="sig-param">&lt;SpecialVocabSymbols.PAD: '&lt;pad&gt;'&gt;)</em>, <em class="sig-param">keep_freqs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for storing vocabulary. It supports frequency counting and size
+limiting.</p>
+<dl class="attribute">
+<dt id="podium.storage.vocab.Vocab.finalized">
+<code class="sig-name descname">finalized</code><a class="headerlink" href="#podium.storage.vocab.Vocab.finalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>true if the vocab is finalized, false otherwise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.vocab.Vocab.itos">
+<code class="sig-name descname">itos</code><a class="headerlink" href="#podium.storage.vocab.Vocab.itos" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of words</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.vocab.Vocab.stoi">
+<code class="sig-name descname">stoi</code><a class="headerlink" href="#podium.storage.vocab.Vocab.stoi" title="Permalink to this definition">¶</a></dt>
+<dd><p>mapping from word string to index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.__add__">
+<code class="sig-name descname">__add__</code><span class="sig-paren">(</span><em class="sig-param">values: Union[Vocab, Iterable]</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method allows a vocabulary to be added to current vocabulary or
+that a set of values is added to the vocabulary.</p>
+<p>If max_size if None for any of the two Vocabs, the max_size of the resulting Vocab
+will also be None. If they are both defined, the max_size of the resulting Vocab
+will be the sum of max_sizes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>Iterable</em><em> or </em><em>Vocab</em>) – If Vocab, a new Vocab will be created containing all of the special symbols
+and tokens from both Vocabs.
+If Iterable, a new Vocab will be returned containing a copy of this Vocab
+with the iterables’ tokens added.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a new Vocab</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Vocab</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If this vocab is finalized and values are tried to be added, or
+    if both Vocabs are not either both finalized or not finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.__eq__">
+<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Two vocabs are same if they have same finalization status, their
+stoi and itos mappings are same and their frequency counters are same.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>object</em>) – object for which we want to knwo equality propertiy</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>equal</strong> – true if two vocabs are same, false otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.__getitem__">
+<code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the token index of the passed token. If the passed token has no index,
+UNK token index is returned.
+Otherwise, an exception is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – token whose index is to be returned.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stoi index of the token.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>KeyError</strong> – If the passed token has no index and vocab has no UNK special token.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.__iadd__">
+<code class="sig-name descname">__iadd__</code><span class="sig-paren">(</span><em class="sig-param">values: Union[Vocab, Iterable]</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds additional values or another Vocab to this Vocab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>Iterable</em><em> or </em><em>Vocab</em>) – <p>Values to be added to this Vocab.
+If Vocab, all of the token frequencies and specials from that Vocab will be
+added to this Vocab.</p>
+<p>If Iterable, all of the tokens from the Iterable will be added to this Vocab,
+increasing the frequencies of those tokens.</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vocab</strong> – Returns current Vocab instance to enable chaining</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Vocab</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – If the current vocab is finalized, if ‘values’ is a string or if the
+    RHS Vocab doesn’t contain token frequencies.</p></li>
+<li><p><strong>TypeError</strong> – If the values cannot be iterated over.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.__iter__">
+<code class="sig-name descname">__iter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns iterator over vocabulary, if the vocabulary is not
+finalized iteration is done over frequency counter and special symbols
+are not included, otherwise it is performed on itos and special
+symbols are included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>iterator over vocab tokens</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>iter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.__len__">
+<code class="sig-name descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method calculates vocab lengths including special symbols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>length</strong> – vocab size including special symbols</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method finalizes vocab building. It also releases frequency counter
+if user set not to keep them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the vocab is already finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.get_freqs">
+<code class="sig-name descname">get_freqs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.get_freqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains vocabulary frequencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>freq</strong> – mapping frequency for every word</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Counter</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the user stated that he doesn’t want to keep frequencies
+    and the vocab is finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.has_specials">
+<em class="property">property </em><code class="sig-name descname">has_specials</code><a class="headerlink" href="#podium.storage.vocab.Vocab.has_specials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property that checks if the vocabulary contains special symbols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>flag</strong> – true if the vocabulary has special symbols, false otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.numericalize">
+<code class="sig-name descname">numericalize</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.numericalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method numericalizes given tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>iter</em><em>(</em><em>str</em><em>)</em>) – iterable collection of tokens</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>numericalized_vector</strong> – numpy array of numericalized tokens</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the vocabulary is not finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.padding_index">
+<code class="sig-name descname">padding_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.padding_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns padding symbol index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pad_symbol_index</strong> – padding symbol index in the vocabulary</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the padding symbol is not present in the vocabulary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vocab.Vocab.reverse_numericalize">
+<code class="sig-name descname">reverse_numericalize</code><span class="sig-paren">(</span><em class="sig-param">numericalized_data: Iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.Vocab.reverse_numericalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an iterable containing numericalized data into a list of tokens.
+The tokens are read from this Vocab’s itos and no additional processing is done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>numericalized_data</strong> (<em>Iterable</em>) – data to be reverse numericalized</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of tokens</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the vocabulary is not finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.vocab.VocabDict">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vocab.</code><code class="sig-name descname">VocabDict</code><span class="sig-paren">(</span><em class="sig-param">default_factory=None</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.VocabDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<p>Vocab dictionary class that is used like default dict but without adding missing
+key to the dictionary.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.vocab.unique">
+<code class="sig-prename descclassname">podium.storage.vocab.</code><code class="sig-name descname">unique</code><span class="sig-paren">(</span><em class="sig-param">values: Iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vocab.unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator that iterates over the first occurrence of every value in values,
+preserving original order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>Iterable</em>) – Iterable of values</p>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p><em>the first occurrence of every value in values, preserving order.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.storage">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.storage" title="Permalink to this headline">¶</a></h2>
+<p>Package contains modules for storing and loading datasets and vectors.</p>
+<dl class="class">
+<dt id="podium.storage.BaseDownloader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">BaseDownloader</code><a class="headerlink" href="#podium.storage.BaseDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>BaseDownloader interface for downloader classes.</p>
+<dl class="method">
+<dt id="podium.storage.BaseDownloader.download">
+<em class="property">abstract classmethod </em><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">uri</em>, <em class="sig-param">path</em>, <em class="sig-param">overwrite=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.BaseDownloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function downloades file from given URI to given path.
+If the overwrite variable is true and given path already exists
+it will be overwriten with new file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uri</strong> (<em>str</em>) – URI of file that needs to be downloaded</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – destination path where to save downloaded file</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – if true and given path exists downloaded file
+will overwrite existing files</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>rewrite_status</strong> – True if download was successful or False if the file already exists
+and given overwrite value was False.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – if given uri or path are None</p></li>
+<li><p><strong>RuntimeError</strong> – if there was an error while obtaining resource from uri</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.SCPDownloader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">SCPDownloader</code><a class="headerlink" href="#podium.storage.SCPDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.storage.resources.html#podium.storage.resources.downloader.BaseDownloader" title="podium.storage.resources.downloader.BaseDownloader"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.resources.downloader.BaseDownloader</span></code></a></p>
+<p>Class for downloading file from server using sftp on top of
+ssh protocol.</p>
+<dl class="attribute">
+<dt id="podium.storage.SCPDownloader.USER_NAME_KEY">
+<code class="sig-name descname">USER_NAME_KEY</code><a class="headerlink" href="#podium.storage.SCPDownloader.USER_NAME_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining keyword argument for username</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SCPDownloader.PASSWORD_KEY">
+<code class="sig-name descname">PASSWORD_KEY</code><a class="headerlink" href="#podium.storage.SCPDownloader.PASSWORD_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining keyword argument for password
+if the private key file uses paraphrase, user should define it here</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SCPDownloader.HOST_ADDR_KEY">
+<code class="sig-name descname">HOST_ADDR_KEY</code><a class="headerlink" href="#podium.storage.SCPDownloader.HOST_ADDR_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining keyword argument for remote host address</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SCPDownloader.PRIVATE_KEY_FILE_KEY">
+<code class="sig-name descname">PRIVATE_KEY_FILE_KEY</code><a class="headerlink" href="#podium.storage.SCPDownloader.PRIVATE_KEY_FILE_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining keyword argument for private key location
+if the user uses default linux private key location this argument
+can be set to None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.SCPDownloader.download">
+<em class="property">classmethod </em><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">uri</em>, <em class="sig-param">path</em>, <em class="sig-param">overwrite=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.SCPDownloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method downloads a file from the remote machine and saves it to the local
+path. If the overwrite variable is true and given path already
+exists it will be overwriten with new file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uri</strong> (<em>str</em>) – URI of the file on remote machine</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – path of the file on local machine</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – if true and given path exists downloaded file
+will overwrite existing files</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>str</em><em>)</em>) – key word arguments that are described in class attributes
+used for connecting to the remote machine</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>rewrite_status</strong> – True if download was successful or False if the file already exists
+and given overwrite value was False.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If given uri or path are None, or if the host is not defined.</p></li>
+<li><p><strong>RuntimeError</strong> – If there was an error while obtaining resource from uri.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.HttpDownloader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">HttpDownloader</code><a class="headerlink" href="#podium.storage.HttpDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.storage.resources.html#podium.storage.resources.downloader.BaseDownloader" title="podium.storage.resources.downloader.BaseDownloader"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.resources.downloader.BaseDownloader</span></code></a></p>
+<p>Interface for downloader that uses http protocol for data transfer.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.SimpleHttpDownloader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">SimpleHttpDownloader</code><a class="headerlink" href="#podium.storage.SimpleHttpDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.storage.resources.html#podium.storage.resources.downloader.HttpDownloader" title="podium.storage.resources.downloader.HttpDownloader"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.resources.downloader.HttpDownloader</span></code></a></p>
+<p>Downloader that uses HTTP protocol for downloading. It doesn’t offer
+content confirmation (as needed for example in google drive)
+or any kind of authentication.</p>
+<dl class="method">
+<dt id="podium.storage.SimpleHttpDownloader.download">
+<em class="property">classmethod </em><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">uri</em>, <em class="sig-param">path</em>, <em class="sig-param">overwrite=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.SimpleHttpDownloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function downloades file from given URI to given path.
+If the overwrite variable is true and given path already exists
+it will be overwriten with new file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uri</strong> (<em>str</em>) – URI of file that needs to be downloaded</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – destination path where to save downloaded file</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – if true and given path exists downloaded file
+will overwrite existing files</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>rewrite_status</strong> – True if download was successful or False if the file already exists
+and given overwrite value was False.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – if given uri or path are None</p></li>
+<li><p><strong>RuntimeError</strong> – if there was an error while obtaining resource from uri</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.Field">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">Field</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">tokenizer='split'</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">tokenize=True</em>, <em class="sig-param">store_as_raw=False</em>, <em class="sig-param">store_as_tokenized=False</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">is_numericalizable=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">padding_token=-999</em>, <em class="sig-param">is_target=False</em>, <em class="sig-param">fixed_length=None</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the preprocessing and numericalization logic for a single
+field of a dataset.</p>
+<dl class="method">
+<dt id="podium.storage.Field.__getstate__">
+<code class="sig-name descname">__getstate__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.__getstate__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains field state. It is used for pickling dataset data
+to file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>state</strong> – dataset state dictionary</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.__setstate__">
+<code class="sig-name descname">__setstate__</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.__setstate__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method sets field state. It is used for unpickling dataset data
+from file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>dict</em>) – dataset state dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.add_posttokenize_hook">
+<code class="sig-name descname">add_posttokenize_hook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.add_posttokenize_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a post-tokenization hook to the Field.
+If multiple hooks are added to the field, the order of their execution
+will be the same as the order in which they were added to the field,
+each subsequent hook taking the output of the previous hook as its
+input.
+If the same function is added to the Field as a hook multiple times,
+it will be executed that many times.
+Post-tokenization hooks are called only if the Field is sequential
+(in non-sequential fields there is no tokenization and only
+pre-tokenization hooks are called).
+The output of the final post-tokenization hook are the raw and
+tokenized data that the preprocess function will use to produce its
+result.</p>
+<dl class="simple">
+<dt>Posttokenize hooks have the following outline:</dt><dd><dl class="simple">
+<dt>func post_tok_hook(raw_data, tokenized_data):</dt><dd><p>raw_out, tokenized_out = do_stuff(raw_data, tokenized_data)
+return raw_out, tokenized_out</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>where ‘tokenized_data’ is and ‘tokenized_out’ should be an iterable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hook</strong> (<em>callable</em>) – The post-tokenization hook that we want to add to the field.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>If field is declared as non numericalizable.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.add_pretokenize_hook">
+<code class="sig-name descname">add_pretokenize_hook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.add_pretokenize_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a pre-tokenization hook to the Field.
+If multiple hooks are added to the field, the order of their execution
+will be the same as the order in which they were added to the field,
+each subsequent hook taking the output of the previous hook as its
+input.
+If the same function is added to the Field as a hook multiple times,
+it will be executed that many times.
+The output of the final pre-tokenization hook is the raw data that the
+tokenizer will get as its input.</p>
+<dl class="simple">
+<dt>Pretokenize hooks have the following signature:</dt><dd><dl class="simple">
+<dt>func pre_tok_hook(raw_data):</dt><dd><p>raw_data_out = do_stuff(raw_data)
+return raw_data_out</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>This can be used to eliminate encoding errors in data, replace numbers
+and names, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hook</strong> (<em>callable</em>) – The pre-tokenization hook that we want to add to the field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signals that this field’s vocab can be built.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.finalized">
+<em class="property">property </em><code class="sig-name descname">finalized</code><a class="headerlink" href="#podium.storage.Field.finalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the field’s Vocab vas finalized. If the field has no
+vocab, returns True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether the field’s Vocab vas finalized. If the field has no
+vocab, returns True.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.get_default_value">
+<code class="sig-name descname">get_default_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.get_default_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains default field value for missing data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The index of the missing data token, if this field is numericalizable.
+None value otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>missing_symbol index or None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If missing data is not allowed in this field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.get_numericalization_for_example">
+<code class="sig-name descname">get_numericalization_for_example</code><span class="sig-paren">(</span><em class="sig-param">example</em>, <em class="sig-param">cache=True</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.get_numericalization_for_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the numericalized data of this field for the provided example.
+The numericalized data is generated and cached in the example if ‘cache’ is true
+and the cached data is not already present. If already cached, the cached data is
+returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>example</strong> (<em>Example</em>) – example to get numericalized data for.</p></li>
+<li><p><strong>cache</strong> (<em>bool</em>) – whether to store the cache the calculated numericalization if not already
+cached</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>numericalized data</strong> – The numericalized data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.get_output_fields">
+<code class="sig-name descname">get_output_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.get_output_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Iterable of the contained output fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an Iterable of the contained output fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.numericalize">
+<code class="sig-name descname">numericalize</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.numericalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numericalize the already preprocessed data point based either on
+the vocab that was previously built, or on a custom numericalization
+function, if the field doesn’t use a vocab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>hashable</em><em>, </em><em>iterable</em><em>(</em><em>hashable</em><em>)</em><em>)</em>) – Tuple of (raw, tokenized) of preprocessed input data. If the field
+is sequential, ‘raw’ is ignored and can be None. Otherwise,
+‘sequential’ is ignored and can be None.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Array of stoi indexes of the tokens, if data exists.
+None, if data is missing and missing data is allowed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If data is None and missing data is not allowed in this field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.pad_to_length">
+<code class="sig-name descname">pad_to_length</code><span class="sig-paren">(</span><em class="sig-param">row</em>, <em class="sig-param">length</em>, <em class="sig-param">custom_pad_symbol=None</em>, <em class="sig-param">pad_left=False</em>, <em class="sig-param">truncate_left=False</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.pad_to_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either pads the given row with pad symbols, or truncates the row
+to be of given length. The vocab provides the pad symbol for all
+fields that have vocabs, otherwise the pad symbol has to be given as
+a parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>np.ndarray</em>) – The row of numericalized data that is to be padded / truncated.</p></li>
+<li><p><strong>length</strong> (<em>int</em>) – The desired length of the row.</p></li>
+<li><p><strong>custom_pad_symbol</strong> (<em>int</em>) – The pad symbol that is to be used if the field doesn’t have a
+vocab. If the field has a vocab, this parameter is ignored and can
+be None.</p></li>
+<li><p><strong>pad_left</strong> (<em>bool</em>) – If True padding will be done on the left side, otherwise on the
+right side. Default: False.</p></li>
+<li><p><strong>truncate_left</strong> (<em>bool</em>) – If True field will be trucated on the left side, otherwise on the
+right side. Default: False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the field doesn’t use a vocab and no custom pad symbol was
+    given.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.preprocess">
+<code class="sig-name descname">preprocess</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocesses raw data, tokenizing it if the field is sequential,
+updating the vocab if the field is eager and preserving the raw data
+if field’s ‘store_raw’ is true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em><em> or </em><em>iterable</em><em>(</em><em>hashable</em><em>)</em>) – The raw data that needs to be preprocessed.
+String if ‘store_as_raw’ and/or ‘tokenize’ attributes are True.
+iterable(hashable) if store_as_tokenized attribute is True.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple of (raw, tokenized). If the field’s ‘store_as_raw’
+attribute is False, then ‘raw’ will be None (we don’t preserve
+the raw data). If field’s ‘tokenize’ and ‘store_as_tokenized’
+attributes are False then ‘tokenized’ will be None.
+The attributes ‘store_as_raw’, ‘store_as_tokenized’ and ‘tokenize’
+will never all be False, so the function will never return (None, None).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(str, Iterable(hashable))</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>If data is None and missing data is not allowed.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.remove_posttokenize_hooks">
+<code class="sig-name descname">remove_posttokenize_hooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.remove_posttokenize_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the post-tokenization hooks that were added to the Field.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.remove_pretokenize_hooks">
+<code class="sig-name descname">remove_pretokenize_hooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.remove_pretokenize_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the pre-tokenization hooks that were added to the Field.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.update_vocab">
+<code class="sig-name descname">update_vocab</code><span class="sig-paren">(</span><em class="sig-param">raw</em>, <em class="sig-param">tokenized</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Field.update_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the vocab with a data point in its raw and tokenized form.
+If the field is sequential, the vocab is updated with the tokenized
+form (and ‘raw’ can be None), otherwise the raw form is used to
+update (and ‘tokenized’ can be None).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> (<em>hashable</em>) – The raw form of the data point that the vocab is to be updated
+with. If the field is sequential, this parameter is ignored and
+can be None.</p></li>
+<li><p><strong>tokenized</strong> (<em>iterable</em><em>(</em><em>hashable</em><em>)</em>) – The tokenized form of the data point that the vocab is to be
+updated with. If the field is NOT sequential
+(‘store_as_tokenized’ and ‘tokenize’ attributes are False),
+this parameter is ignored and can be None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Field.use_vocab">
+<em class="property">property </em><code class="sig-name descname">use_vocab</code><a class="headerlink" href="#podium.storage.Field.use_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>A flag that tells whether the field uses a vocab or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether the field uses a vocab or not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.TokenizedField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">TokenizedField</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">padding_token=-999</em>, <em class="sig-param">is_target=False</em>, <em class="sig-param">fixed_length=None</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.TokenizedField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.field.Field" title="podium.storage.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.field.Field</span></code></a></p>
+<p>Tokenized version of the Field. Holds the preprocessing and
+numericalization logic for the pre-tokenized dataset fields.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.LabelField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">LabelField</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.LabelField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.field.Field" title="podium.storage.field.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.field.Field</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.MultilabelField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">MultilabelField</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">num_of_classes=None</em>, <em class="sig-param">vocab=None</em>, <em class="sig-param">eager=True</em>, <em class="sig-param">custom_numericalize=None</em>, <em class="sig-param">batch_as_matrix=True</em>, <em class="sig-param">allow_missing_data=False</em>, <em class="sig-param">missing_data_token=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultilabelField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.field.TokenizedField" title="podium.storage.field.TokenizedField"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.field.TokenizedField</span></code></a></p>
+<p>Class used for storing pre-tokenized labels.
+Used for multilabeled datasets.</p>
+<dl class="method">
+<dt id="podium.storage.MultilabelField.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultilabelField.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signals that this field’s vocab can be built.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.MultioutputField">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">MultioutputField</code><span class="sig-paren">(</span><em class="sig-param">output_fields</em>, <em class="sig-param">tokenizer='split'</em>, <em class="sig-param">language='en'</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultioutputField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Field that does pretokenization and tokenization once and passes it to its
+output fields. Output fields are any type of field. The output fields are used only
+for posttokenization processing (posttokenization hooks and vocab updating).</p>
+<dl class="method">
+<dt id="podium.storage.MultioutputField.add_output_field">
+<code class="sig-name descname">add_output_field</code><span class="sig-paren">(</span><em class="sig-param">field</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultioutputField.add_output_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the passed field to this field’s output fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>field</strong> (<em>Field</em>) – Field to add to output fields.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.MultioutputField.add_pretokenize_hook">
+<code class="sig-name descname">add_pretokenize_hook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultioutputField.add_pretokenize_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a pre-tokenization hook to the MultioutputField.
+If multiple hooks are added to the field, the order of their execution
+will be the same as the order in which they were added to the field,
+each subsequent hook taking the output of the previous hook as its
+input.
+If the same function is added to the Field as a hook multiple times,
+it will be executed that many times.
+The output of the final pre-tokenization hook is the raw data that the
+tokenizer will get as its input.</p>
+<dl class="simple">
+<dt>Pretokenize hooks have the following signature:</dt><dd><dl class="simple">
+<dt>func pre_tok_hook(raw_data):</dt><dd><p>raw_data_out = do_stuff(raw_data)
+return raw_data_out</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>This can be used to eliminate encoding errors in data, replace numbers
+and names, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hook</strong> (<em>callable</em>) – The pre-tokenization hook that we want to add to the field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.MultioutputField.get_output_fields">
+<code class="sig-name descname">get_output_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultioutputField.get_output_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Iterable of the contained output fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an Iterable of the contained output fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Iterable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.MultioutputField.remove_pretokenize_hooks">
+<code class="sig-name descname">remove_pretokenize_hooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.MultioutputField.remove_pretokenize_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the pre-tokenization hooks that were added to the MultioutputField.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.unpack_fields">
+<code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">unpack_fields</code><span class="sig-paren">(</span><em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.unpack_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flattens the given fields object into a flat list of fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>(</em><em>list | dict</em><em>)</em>) – List or dict that can contain nested tuples and None as values and
+column names as keys (dict).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A flat list of Fields found in the given ‘fields’ object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[Field]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.LargeResource">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">LargeResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.LargeResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Large resource that needs to download files from URL. Class also
+supports archive decompression.</p>
+<dl class="attribute">
+<dt id="podium.storage.LargeResource.BASE_RESOURCE_DIR">
+<code class="sig-name descname">BASE_RESOURCE_DIR</code><a class="headerlink" href="#podium.storage.LargeResource.BASE_RESOURCE_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>base large files directory path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.LargeResource.RESOURCE_NAME">
+<code class="sig-name descname">RESOURCE_NAME</code><a class="headerlink" href="#podium.storage.LargeResource.RESOURCE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining resource directory name parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.LargeResource.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.storage.LargeResource.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining resource url parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.LargeResource.ARCHIVE">
+<code class="sig-name descname">ARCHIVE</code><a class="headerlink" href="#podium.storage.LargeResource.ARCHIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for defining archiving method paramter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.LargeResource.SUPPORTED_ARCHIVE">
+<code class="sig-name descname">SUPPORTED_ARCHIVE</code><a class="headerlink" href="#podium.storage.LargeResource.SUPPORTED_ARCHIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of supported archive file types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list(str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.SCPLargeResource">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">SCPLargeResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.SCPLargeResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.storage.resources.html#podium.storage.resources.large_resource.LargeResource" title="podium.storage.resources.large_resource.LargeResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.resources.large_resource.LargeResource</span></code></a></p>
+<p>Large resource that needs to download files from URI using scp protocol.
+For other functionalities class uses Large Resource class.</p>
+<dl class="attribute">
+<dt id="podium.storage.SCPLargeResource.SCP_HOST_KEY">
+<code class="sig-name descname">SCP_HOST_KEY</code><a class="headerlink" href="#podium.storage.SCPLargeResource.SCP_HOST_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for keyword argument that defines remote host address</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SCPLargeResource.SCP_USER_KEY">
+<code class="sig-name descname">SCP_USER_KEY</code><a class="headerlink" href="#podium.storage.SCPLargeResource.SCP_USER_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for keyword argument that defines remote host username</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SCPLargeResource.SCP_PASS_KEY">
+<code class="sig-name descname">SCP_PASS_KEY</code><a class="headerlink" href="#podium.storage.SCPLargeResource.SCP_PASS_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for keyword argument that defines remote host password or
+passphrase used in private key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SCPLargeResource.SCP_PRIVATE_KEY">
+<code class="sig-name descname">SCP_PRIVATE_KEY</code><a class="headerlink" href="#podium.storage.SCPLargeResource.SCP_PRIVATE_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>key for keyword argument that defines location for private key
+on linux OS it can be optional if the key is in default location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.VectorStorage">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">VectorStorage</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">default_vector_function=None</em>, <em class="sig-param">cache_path=None</em>, <em class="sig-param">max_vectors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Interface for classes that can vectorize token. One example of such
+vectorizer is word2vec.</p>
+<dl class="method">
+<dt id="podium.storage.VectorStorage.__len__">
+<em class="property">abstract </em><code class="sig-name descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns number of vectors in vector storage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>len</strong> – number of loaded vectors in vector storage</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.VectorStorage.get_embedding_matrix">
+<code class="sig-name descname">get_embedding_matrix</code><span class="sig-paren">(</span><em class="sig-param">vocab=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage.get_embedding_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method constructs embedding matrix.</p>
+<p>Note: From python 3.6 dictionaries preserve insertion order
+<a class="reference external" href="https://docs.python.org/3.6/whatsnew/3.6.html#other-language-changes">https://docs.python.org/3.6/whatsnew/3.6.html#other-language-changes</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vocab</strong> (<em>iter</em><em>(</em><em>token</em><em>)</em>) – collection of tokens for creation of embedding matrix
+default use case is to give this function vocab or itos list
+or <cite>None</cite> if you wish to retrieve all loaded vectors. In case
+<cite>None</cite> is passed as argument, the order of vectors is the same
+as the insertion order of loaded vectors in <cite>VectorStorage</cite>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If vector storage is not initialized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.VectorStorage.get_vector_dim">
+<em class="property">abstract </em><code class="sig-name descname">get_vector_dim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage.get_vector_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Method returns vector dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dim</strong> – vector dimension</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – if vector storage is not initialized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.VectorStorage.load_all">
+<em class="property">abstract </em><code class="sig-name descname">load_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage.load_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads all vectors stored in instance path to the vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If instance path is not a valid path.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.VectorStorage.load_vocab">
+<em class="property">abstract </em><code class="sig-name descname">load_vocab</code><span class="sig-paren">(</span><em class="sig-param">vocab</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage.load_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads vectors for tokens in vocab
+stored in given path to the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vocab</strong> (<em>iterable object</em>) – vocabulary with unique words</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If given path is not a valid path or given vocab is none
+    or if the vector values in vector storage cannot be casted to float.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.VectorStorage.token_to_vector">
+<em class="property">abstract </em><code class="sig-name descname">token_to_vector</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.VectorStorage.token_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains vector for given token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – token from vocabulary</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vector</strong> – vector representation of given token</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>KeyError</strong> – If given token doesn’t have vector representation and default
+    vector function is not defined (None).</p></li>
+<li><p><strong>ValueError</strong> – If given token is None.</p></li>
+<li><p><strong>RuntimeError</strong> – If vector storage is not initialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.BasicVectorStorage">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">BasicVectorStorage</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">default_vector_function=&lt;function random_normal_default_vector&gt;</em>, <em class="sig-param">cache_path=None</em>, <em class="sig-param">max_vectors=None</em>, <em class="sig-param">encoding='utf-8'</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.BasicVectorStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.storage.vectorizers.html#podium.storage.vectorizers.vectorizer.VectorStorage" title="podium.storage.vectorizers.vectorizer.VectorStorage"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.vectorizers.vectorizer.VectorStorage</span></code></a></p>
+<p>Basic implementation of VectorStorage that handles loading vectors from
+system storage.</p>
+<dl class="attribute">
+<dt id="podium.storage.BasicVectorStorage._vectors">
+<code class="sig-name descname">_vectors</code><a class="headerlink" href="#podium.storage.BasicVectorStorage._vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary offering word to vector mapping</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.BasicVectorStorage._dim">
+<code class="sig-name descname">_dim</code><a class="headerlink" href="#podium.storage.BasicVectorStorage._dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>vector dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.BasicVectorStorage._initialized">
+<code class="sig-name descname">_initialized</code><a class="headerlink" href="#podium.storage.BasicVectorStorage._initialized" title="Permalink to this definition">¶</a></dt>
+<dd><p>has the vector storage been initialized by loading vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.BasicVectorStorage._binary">
+<code class="sig-name descname">_binary</code><a class="headerlink" href="#podium.storage.BasicVectorStorage._binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>if True, the file is read as a binary file.
+Else, it’s read as a plain utf-8 text file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.BasicVectorStorage.get_vector_dim">
+<code class="sig-name descname">get_vector_dim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.BasicVectorStorage.get_vector_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Method returns vector dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dim</strong> – vector dimension</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – if vector storage is not initialized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.BasicVectorStorage.load_all">
+<code class="sig-name descname">load_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.BasicVectorStorage.load_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads all vectors stored in instance path to the vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If instance path is not a valid path.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.BasicVectorStorage.load_vocab">
+<code class="sig-name descname">load_vocab</code><span class="sig-paren">(</span><em class="sig-param">vocab</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.BasicVectorStorage.load_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads vectors for tokens in vocab
+stored in given path to the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vocab</strong> (<em>iterable object</em>) – vocabulary with unique words</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If given path is not a valid path or given vocab is none
+    or if the vector values in vector storage cannot be casted to float.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.BasicVectorStorage.token_to_vector">
+<code class="sig-name descname">token_to_vector</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.BasicVectorStorage.token_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains vector for given token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – token from vocabulary</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vector</strong> – vector representation of given token</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>KeyError</strong> – If given token doesn’t have vector representation and default
+    vector function is not defined (None).</p></li>
+<li><p><strong>ValueError</strong> – If given token is None.</p></li>
+<li><p><strong>RuntimeError</strong> – If vector storage is not initialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.SpecialVocabSymbols">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">SpecialVocabSymbols</code><a class="headerlink" href="#podium.storage.SpecialVocabSymbols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Class for special vocabular symbols</p>
+<dl class="attribute">
+<dt id="podium.storage.SpecialVocabSymbols.UNK">
+<code class="sig-name descname">UNK</code><a class="headerlink" href="#podium.storage.SpecialVocabSymbols.UNK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tag for unknown word</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.SpecialVocabSymbols.PAD">
+<code class="sig-name descname">PAD</code><a class="headerlink" href="#podium.storage.SpecialVocabSymbols.PAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>TAG for padding symbol</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.Vocab">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">Vocab</code><span class="sig-paren">(</span><em class="sig-param">max_size=None</em>, <em class="sig-param">min_freq=1</em>, <em class="sig-param">specials=(&lt;SpecialVocabSymbols.UNK: '&lt;unk&gt;'&gt;</em>, <em class="sig-param">&lt;SpecialVocabSymbols.PAD: '&lt;pad&gt;'&gt;)</em>, <em class="sig-param">keep_freqs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for storing vocabulary. It supports frequency counting and size
+limiting.</p>
+<dl class="attribute">
+<dt id="podium.storage.Vocab.finalized">
+<code class="sig-name descname">finalized</code><a class="headerlink" href="#podium.storage.Vocab.finalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>true if the vocab is finalized, false otherwise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.Vocab.itos">
+<code class="sig-name descname">itos</code><a class="headerlink" href="#podium.storage.Vocab.itos" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of words</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.Vocab.stoi">
+<code class="sig-name descname">stoi</code><a class="headerlink" href="#podium.storage.Vocab.stoi" title="Permalink to this definition">¶</a></dt>
+<dd><p>mapping from word string to index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.__add__">
+<code class="sig-name descname">__add__</code><span class="sig-paren">(</span><em class="sig-param">values: Union[Vocab, Iterable]</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method allows a vocabulary to be added to current vocabulary or
+that a set of values is added to the vocabulary.</p>
+<p>If max_size if None for any of the two Vocabs, the max_size of the resulting Vocab
+will also be None. If they are both defined, the max_size of the resulting Vocab
+will be the sum of max_sizes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>Iterable</em><em> or </em><em>Vocab</em>) – If Vocab, a new Vocab will be created containing all of the special symbols
+and tokens from both Vocabs.
+If Iterable, a new Vocab will be returned containing a copy of this Vocab
+with the iterables’ tokens added.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a new Vocab</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Vocab</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If this vocab is finalized and values are tried to be added, or
+    if both Vocabs are not either both finalized or not finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.__eq__">
+<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Two vocabs are same if they have same finalization status, their
+stoi and itos mappings are same and their frequency counters are same.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>object</em>) – object for which we want to knwo equality propertiy</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>equal</strong> – true if two vocabs are same, false otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.__getitem__">
+<code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the token index of the passed token. If the passed token has no index,
+UNK token index is returned.
+Otherwise, an exception is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – token whose index is to be returned.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stoi index of the token.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>KeyError</strong> – If the passed token has no index and vocab has no UNK special token.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.__iadd__">
+<code class="sig-name descname">__iadd__</code><span class="sig-paren">(</span><em class="sig-param">values: Union[Vocab, Iterable]</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds additional values or another Vocab to this Vocab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>Iterable</em><em> or </em><em>Vocab</em>) – <p>Values to be added to this Vocab.
+If Vocab, all of the token frequencies and specials from that Vocab will be
+added to this Vocab.</p>
+<p>If Iterable, all of the tokens from the Iterable will be added to this Vocab,
+increasing the frequencies of those tokens.</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vocab</strong> – Returns current Vocab instance to enable chaining</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Vocab</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError</strong> – If the current vocab is finalized, if ‘values’ is a string or if the
+    RHS Vocab doesn’t contain token frequencies.</p></li>
+<li><p><strong>TypeError</strong> – If the values cannot be iterated over.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.__iter__">
+<code class="sig-name descname">__iter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns iterator over vocabulary, if the vocabulary is not
+finalized iteration is done over frequency counter and special symbols
+are not included, otherwise it is performed on itos and special
+symbols are included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>iterator over vocab tokens</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>iter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.__len__">
+<code class="sig-name descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method calculates vocab lengths including special symbols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>length</strong> – vocab size including special symbols</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method finalizes vocab building. It also releases frequency counter
+if user set not to keep them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the vocab is already finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.get_freqs">
+<code class="sig-name descname">get_freqs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.get_freqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains vocabulary frequencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>freq</strong> – mapping frequency for every word</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Counter</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the user stated that he doesn’t want to keep frequencies
+    and the vocab is finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.has_specials">
+<em class="property">property </em><code class="sig-name descname">has_specials</code><a class="headerlink" href="#podium.storage.Vocab.has_specials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property that checks if the vocabulary contains special symbols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>flag</strong> – true if the vocabulary has special symbols, false otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.numericalize">
+<code class="sig-name descname">numericalize</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.numericalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method numericalizes given tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>iter</em><em>(</em><em>str</em><em>)</em>) – iterable collection of tokens</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>numericalized_vector</strong> – numpy array of numericalized tokens</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the vocabulary is not finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.padding_index">
+<code class="sig-name descname">padding_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.padding_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns padding symbol index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pad_symbol_index</strong> – padding symbol index in the vocabulary</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the padding symbol is not present in the vocabulary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.Vocab.reverse_numericalize">
+<code class="sig-name descname">reverse_numericalize</code><span class="sig-paren">(</span><em class="sig-param">numericalized_data: Iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.Vocab.reverse_numericalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an iterable containing numericalized data into a list of tokens.
+The tokens are read from this Vocab’s itos and no additional processing is done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>numericalized_data</strong> (<em>Iterable</em>) – data to be reverse numericalized</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of tokens</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the vocabulary is not finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.ExampleFactory">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">ExampleFactory</code><span class="sig-paren">(</span><em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class used to create Example instances. Every ExampleFactory dynamically creates
+its own example class definition optimised for the fields provided in __init__.</p>
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.create_empty_example">
+<code class="sig-name descname">create_empty_example</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.create_empty_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates empty example with field names stored in example factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>example</strong> – empty Example instance with initialized field names</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.from_csv">
+<code class="sig-name descname">from_csv</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">field_to_index=None</em>, <em class="sig-param">delimiter='</em>, <em class="sig-param">'</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Example from a CSV line and a corresponding
+list or dict of Fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>str</em>) – A string containing a single row of values separated by the
+given delimiter.</p></li>
+<li><p><strong>field_to_index</strong> (<em>dict</em>) – A dict that maps column names to their indices in the line of data.
+Only needed if fields is a dict, otherwise ignored.</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – The delimiter that separates the values in the line of data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An Example whose attributes are the given Fields created with the
+given column values. These Fields can be accessed by their names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.from_dict">
+<code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates example from data in dictionary format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>object</em><em>)</em>) – dictionary that maps field name to field value</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>example</strong> – example instance with given data saved to fields</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.from_fields_tree">
+<code class="sig-name descname">from_fields_tree</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">subtrees=False</em>, <em class="sig-param">label_transform=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.from_fields_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Example (or multiple Examples) from a string
+representing an nltk tree and a list of corresponding values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>str</em>) – A string containing an nltk tree whose values are to be mapped
+to Fields.</p></li>
+<li><p><strong>subtrees</strong> (<em>bool</em>) – A flag denoting whether an example will be created from every
+subtree in the tree (when set to True), or just from the whole
+tree (when set to False).</p></li>
+<li><p><strong>label_transform</strong> (<em>callable</em>) – A function which converts the tree labels to a string representation,
+if wished. Useful for converting multiclass tasks to binary (SST) and
+making labels verbose. If None, the labels are not changed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>If subtrees was False, returns an Example whose attributes are
+the given Fields created with the given column values.
+These Fields can be accessed by their names.</p>
+<p>If subtrees was True, returns a list of such Examples for every
+subtree in the given tree.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Example | list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.from_json">
+<code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Example from a JSON object and the
+corresponding fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – A string containing a single JSON object
+(key-value pairs surrounded by curly braces).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An Example whose attributes are the given Fields created with the
+given column values. These Fields can be accessed by their names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If JSON doesn’t contain key name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.from_list">
+<code class="sig-name descname">from_list</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.from_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates example from data in list format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>list</em>) – list containing values for fields in order that the fields were given to
+example factory</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>example</strong> – example instance with given data saved to fields</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.ExampleFactory.from_xml_str">
+<code class="sig-name descname">from_xml_str</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.ExampleFactory.from_xml_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates and Example from xml string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – XML formated string that contains the values of a single data
+instance, that are to be mapped to Fields.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An Example whose attributes are the given Fields created with the
+given column values. These Fields can be accessed by their names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Example</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the name is not contained in the xml string.</p></li>
+<li><p><strong>ParseError</strong> – If there was a problem while parsing xml sting, invalid xml.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.ExampleFormat">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">ExampleFormat</code><a class="headerlink" href="#podium.storage.ExampleFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.TfIdfVectorizer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.</code><code class="sig-name descname">TfIdfVectorizer</code><span class="sig-paren">(</span><em class="sig-param">vocab=None</em>, <em class="sig-param">norm='l2'</em>, <em class="sig-param">use_idf=True</em>, <em class="sig-param">smooth_idf=True</em>, <em class="sig-param">sublinear_tf=False</em>, <em class="sig-param">specials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.TfIdfVectorizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.storage.vectorizers.html#podium.storage.vectorizers.tfidf.CountVectorizer" title="podium.storage.vectorizers.tfidf.CountVectorizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.vectorizers.tfidf.CountVectorizer</span></code></a></p>
+<p>Class converts data from one field in examples to matrix of tf-idf features.
+It is equivalent to scikit-learn TfidfVectorizer available at
+<a class="reference external" href="https://scikit-learn.org">https://scikit-learn.org</a>.
+Class is dependant on TfidfTransformer defined in scikit-learn library.</p>
+<dl class="method">
+<dt id="podium.storage.TfIdfVectorizer.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">field</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.TfIdfVectorizer.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Learn idf from dataset on data in given field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>Dataset</em>) – dataset instance cointaining data on which to build idf matrix</p></li>
+<li><p><strong>field</strong> (<em>Field</em>) – which field in dataset to use for tfidf</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TfIdfVectorizer</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If dataset or field are None and if name of given field is not in dataset.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.TfIdfVectorizer.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">examples</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.TfIdfVectorizer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms examples to example-term matrix. Uses vocabulary that is given
+in constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>example</strong> (<em>iterable</em>) – an iterable which yields array with numericalized tokens</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X</strong> – Tf-idf weighted document-term matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>sparse matrix, [n_samples, n_features]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If examples are None.</p></li>
+<li><p><strong>RuntimeError</strong> – If vectorizer is not fitted yet.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.storage package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-podium.storage.example_factory">podium.storage.example_factory module</a></li>
+<li><a class="reference internal" href="#module-podium.storage.field">podium.storage.field module</a></li>
+<li><a class="reference internal" href="#module-podium.storage.vocab">podium.storage.vocab module</a></li>
+<li><a class="reference internal" href="#module-podium.storage">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.preproc.stemmer.html"
+                        title="previous chapter">podium.preproc.stemmer package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.storage.resources.html"
+                        title="next chapter">podium.storage.resources package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.storage.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.storage.resources.html" title="podium.storage.resources package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.stemmer.html" title="podium.preproc.stemmer package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

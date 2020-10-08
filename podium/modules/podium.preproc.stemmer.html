@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.preproc.stemmer package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.preproc.stemmer.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.storage package" href="podium.storage.html" />
+    <link rel="prev" title="podium.preproc.lemmatizer package" href="podium.preproc.lemmatizer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.storage.html" title="podium.storage package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.lemmatizer.html" title="podium.preproc.lemmatizer package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.preproc.html" accesskey="U">podium.preproc package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-preproc-stemmer-package">
+<h1>podium.preproc.stemmer package<a class="headerlink" href="#podium-preproc-stemmer-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.preproc.stemmer.croatian_stemmer">
+<span id="podium-preproc-stemmer-croatian-stemmer-module"></span><h2>podium.preproc.stemmer.croatian_stemmer module<a class="headerlink" href="#module-podium.preproc.stemmer.croatian_stemmer" title="Permalink to this headline">¶</a></h2>
+<p>Module contains simple stemmer for Croatian</p>
+<dl class="class">
+<dt id="podium.preproc.stemmer.croatian_stemmer.CroatianStemmer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.preproc.stemmer.croatian_stemmer.</code><code class="sig-name descname">CroatianStemmer</code><a class="headerlink" href="#podium.preproc.stemmer.croatian_stemmer.CroatianStemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Simple stemmer for Croatian language</p>
+<dl class="method">
+<dt id="podium.preproc.stemmer.croatian_stemmer.CroatianStemmer.root_word">
+<code class="sig-name descname">root_word</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.stemmer.croatian_stemmer.CroatianStemmer.root_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns root of a word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – word string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>root</strong> – root of a word</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.preproc.stemmer.croatian_stemmer.CroatianStemmer.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.stemmer.croatian_stemmer.CroatianStemmer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method transforms given word from a dict, given it
+ending with a specific suffix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – word</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>transformed_word</strong> – transformed word according to transformation mappings</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.preproc.stemmer.croatian_stemmer.get_croatian_stemmer_hook">
+<code class="sig-prename descclassname">podium.preproc.stemmer.croatian_stemmer.</code><code class="sig-name descname">get_croatian_stemmer_hook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.stemmer.croatian_stemmer.get_croatian_stemmer_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains croatian stemmer hook.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.preproc.stemmer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.preproc.stemmer" title="Permalink to this headline">¶</a></h2>
+<p>Package contains modules for stemming.</p>
+<dl class="class">
+<dt id="podium.preproc.stemmer.CroatianStemmer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.preproc.stemmer.</code><code class="sig-name descname">CroatianStemmer</code><a class="headerlink" href="#podium.preproc.stemmer.CroatianStemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Simple stemmer for Croatian language</p>
+<dl class="method">
+<dt id="podium.preproc.stemmer.CroatianStemmer.root_word">
+<code class="sig-name descname">root_word</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.stemmer.CroatianStemmer.root_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns root of a word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – word string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>root</strong> – root of a word</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.preproc.stemmer.CroatianStemmer.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.stemmer.CroatianStemmer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method transforms given word from a dict, given it
+ending with a specific suffix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – word</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>transformed_word</strong> – transformed word according to transformation mappings</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.preproc.stemmer package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-podium.preproc.stemmer.croatian_stemmer">podium.preproc.stemmer.croatian_stemmer module</a></li>
+<li><a class="reference internal" href="#module-podium.preproc.stemmer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.preproc.lemmatizer.html"
+                        title="previous chapter">podium.preproc.lemmatizer package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.storage.html"
+                        title="next chapter">podium.storage package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.preproc.stemmer.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.storage.html" title="podium.storage package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.lemmatizer.html" title="podium.preproc.lemmatizer package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.preproc.html" >podium.preproc package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

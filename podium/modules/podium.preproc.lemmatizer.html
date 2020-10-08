@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.preproc.lemmatizer package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.preproc.lemmatizer.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.preproc.stemmer package" href="podium.preproc.stemmer.html" />
+    <link rel="prev" title="podium.preproc package" href="podium.preproc.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.stemmer.html" title="podium.preproc.stemmer package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.html" title="podium.preproc package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.preproc.html" accesskey="U">podium.preproc package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-preproc-lemmatizer-package">
+<h1>podium.preproc.lemmatizer package<a class="headerlink" href="#podium-preproc-lemmatizer-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.preproc.lemmatizer.croatian_lemmatizer">
+<span id="podium-preproc-lemmatizer-croatian-lemmatizer-module"></span><h2>podium.preproc.lemmatizer.croatian_lemmatizer module<a class="headerlink" href="#module-podium.preproc.lemmatizer.croatian_lemmatizer" title="Permalink to this headline">¶</a></h2>
+<p>Module Croatian Lemmatizer loads already prepared
+lemmatizer dictionaries. It can return all possible word
+inflections for a lemma, or return the lemma of any
+word inflexion for the Croatian language.</p>
+<dl class="class">
+<dt id="podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.preproc.lemmatizer.croatian_lemmatizer.</code><code class="sig-name descname">CroatianLemmatizer</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for lemmatizing words and fetching word
+inflections for a given lemma</p>
+<dl class="attribute">
+<dt id="podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.BASE_FOLDER">
+<code class="sig-name descname">BASE_FOLDER</code><a class="headerlink" href="#podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.BASE_FOLDER" title="Permalink to this definition">¶</a></dt>
+<dd><p>folder to download lemmatizer resources</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.MOLEX14_LEMMA2WORD">
+<code class="sig-name descname">MOLEX14_LEMMA2WORD</code><a class="headerlink" href="#podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.MOLEX14_LEMMA2WORD" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary file path containing lemma to words mappings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.MOLEX14_WORD2LEMMA">
+<code class="sig-name descname">MOLEX14_WORD2LEMMA</code><a class="headerlink" href="#podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.MOLEX14_WORD2LEMMA" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary file path containing word to lemma mappings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.get_words_for_lemma">
+<code class="sig-name descname">get_words_for_lemma</code><span class="sig-paren">(</span><em class="sig-param">lemma</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.lemmatizer.croatian_lemmatizer.CroatianLemmatizer.get_words_for_lemma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of words that shares the provided lemma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – Word lemma to find words that share this lemma</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of words that share the lemma provided
+uppercased at same chars as lemma provided</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(str)</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If no words for the provided lemma are found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.preproc.lemmatizer.croatian_lemmatizer.get_croatian_lemmatizer_hook">
+<code class="sig-prename descclassname">podium.preproc.lemmatizer.croatian_lemmatizer.</code><code class="sig-name descname">get_croatian_lemmatizer_hook</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.lemmatizer.croatian_lemmatizer.get_croatian_lemmatizer_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains croatian lemmatizer hook.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>dict</em>) – Croatian lemmatizer arguments.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.preproc.lemmatizer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.preproc.lemmatizer" title="Permalink to this headline">¶</a></h2>
+<p>Package contains modules for lemmatizing.</p>
+<dl class="class">
+<dt id="podium.preproc.lemmatizer.CroatianLemmatizer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.preproc.lemmatizer.</code><code class="sig-name descname">CroatianLemmatizer</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.lemmatizer.CroatianLemmatizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for lemmatizing words and fetching word
+inflections for a given lemma</p>
+<dl class="attribute">
+<dt id="podium.preproc.lemmatizer.CroatianLemmatizer.BASE_FOLDER">
+<code class="sig-name descname">BASE_FOLDER</code><a class="headerlink" href="#podium.preproc.lemmatizer.CroatianLemmatizer.BASE_FOLDER" title="Permalink to this definition">¶</a></dt>
+<dd><p>folder to download lemmatizer resources</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.preproc.lemmatizer.CroatianLemmatizer.MOLEX14_LEMMA2WORD">
+<code class="sig-name descname">MOLEX14_LEMMA2WORD</code><a class="headerlink" href="#podium.preproc.lemmatizer.CroatianLemmatizer.MOLEX14_LEMMA2WORD" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary file path containing lemma to words mappings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.preproc.lemmatizer.CroatianLemmatizer.MOLEX14_WORD2LEMMA">
+<code class="sig-name descname">MOLEX14_WORD2LEMMA</code><a class="headerlink" href="#podium.preproc.lemmatizer.CroatianLemmatizer.MOLEX14_WORD2LEMMA" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary file path containing word to lemma mappings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.preproc.lemmatizer.CroatianLemmatizer.get_words_for_lemma">
+<code class="sig-name descname">get_words_for_lemma</code><span class="sig-paren">(</span><em class="sig-param">lemma</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.preproc.lemmatizer.CroatianLemmatizer.get_words_for_lemma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of words that shares the provided lemma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – Word lemma to find words that share this lemma</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of words that share the lemma provided
+uppercased at same chars as lemma provided</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(str)</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If no words for the provided lemma are found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.preproc.lemmatizer package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-podium.preproc.lemmatizer.croatian_lemmatizer">podium.preproc.lemmatizer.croatian_lemmatizer module</a></li>
+<li><a class="reference internal" href="#module-podium.preproc.lemmatizer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.preproc.html"
+                        title="previous chapter">podium.preproc package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.preproc.stemmer.html"
+                        title="next chapter">podium.preproc.stemmer package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.preproc.lemmatizer.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.stemmer.html" title="podium.preproc.stemmer package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.preproc.html" title="podium.preproc package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.preproc.html" >podium.preproc package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.model_selection package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.model_selection.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.models package" href="podium.models.html" />
+    <link rel="prev" title="podium.metrics package" href="podium.metrics.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.models.html" title="podium.models package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.metrics.html" title="podium.metrics package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" accesskey="U">podium package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-model-selection-package">
+<h1>podium.model_selection package<a class="headerlink" href="#podium-model-selection-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="podium-model-selection-grid-search-module">
+<h2>podium.model_selection.grid_search module<a class="headerlink" href="#podium-model-selection-grid-search-module" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">podium.model_selection.</code><code class="sig-name descname">grid_search</code><span class="sig-paren">(</span><em class="sig-param">experiment: podium.models.experiment.Experiment, dataset: podium.datasets.dataset.Dataset, score_fun: Callable[[numpy.ndarray, numpy.ndarray], float], model_param_grid: Union[Dict[str, Iterable], Iterable[Dict[str, Iterable]]], trainer_param_grid: Union[Dict[str, Iterable], Iterable[Dict[str, Iterable]]], n_splits: int = 5, greater_is_better: bool = True, print_progress: bool = True</em><span class="sig-paren">)</span> &#x2192; Tuple[float, Dict[str, Any], Dict[str, Any]]</dt>
+<dd><p>Method used to find the best combination of training and model hyperparameters
+out of the given hyperparameters. This method uses simple grid search to evaluate
+all possible combinations of the given hyperparameters. Based on sklearn’s
+<code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.model_selection.GridSearchCV</span></code>. Each hyperparameter combination is
+scored by first training the model and then evaluating that model using k-fold cross
+validation. The final score for a set of hyperparameters is the mean of scores across
+all folds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>experiment</strong> (<em>Experiment</em>) – Experiment defining the training and prediction procedure to be optimised.</p></li>
+<li><p><strong>dataset</strong> (<em>Dataset</em>) – Dataset to be used in the hyperparameter search.</p></li>
+<li><p><strong>score_fun</strong> (<em>callable</em>) – Function used to score a hyperparameter set.</p></li>
+<li><p><strong>model_param_grid</strong> (<em>Dict</em><em> or </em><em>Iterable of Dicts</em>) – The model parameter grid. Combinations taken from this grid are passed to the
+model’s __init__ function. Dictionary with parameters names (string) as keys and
+lists of parameter settings to try as values, or a list of such dictionaries,
+in which case the grids spanned by each dictionary in the list are explored.
+This enables searching over any sequence of parameter settings.</p></li>
+<li><p><strong>trainer_param_grid</strong> (<em>Dict</em><em> or </em><em>Iterable of Dicts</em>) – The trainer parameter grid. Combinations taken from this grid are passed to the
+trainers’s train function. Dictionary with parameters names (string) as keys and
+lists of parameter settings to try as values, or a list of such dictionaries,
+in which case the grids spanned by each dictionary in the list are explored.
+This enables searching over any sequence of parameter settings.</p></li>
+<li><p><strong>n_splits</strong> (<em>int</em>) – Number of folds to be used in cross-validation.</p></li>
+<li><p><strong>greater_is_better</strong> (<em>bool</em>) – Whether score_func is a score function (default), meaning high is good, or a loss
+function, meaning low is good.</p></li>
+<li><p><strong>print_progress</strong> (<em>bool</em>) – Whether to print progress. Progress is printed to sys.stderr.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.model_selection">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.model_selection" title="Permalink to this headline">¶</a></h2>
+<p>This package contains model selection methods.</p>
+<dl class="function">
+<dt id="podium.model_selection.grid_search">
+<code class="sig-prename descclassname">podium.model_selection.</code><code class="sig-name descname">grid_search</code><span class="sig-paren">(</span><em class="sig-param">experiment: podium.models.experiment.Experiment, dataset: podium.datasets.dataset.Dataset, score_fun: Callable[[numpy.ndarray, numpy.ndarray], float], model_param_grid: Union[Dict[str, Iterable], Iterable[Dict[str, Iterable]]], trainer_param_grid: Union[Dict[str, Iterable], Iterable[Dict[str, Iterable]]], n_splits: int = 5, greater_is_better: bool = True, print_progress: bool = True</em><span class="sig-paren">)</span> &#x2192; Tuple[float, Dict[str, Any], Dict[str, Any]]<a class="headerlink" href="#podium.model_selection.grid_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method used to find the best combination of training and model hyperparameters
+out of the given hyperparameters. This method uses simple grid search to evaluate
+all possible combinations of the given hyperparameters. Based on sklearn’s
+<code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.model_selection.GridSearchCV</span></code>. Each hyperparameter combination is
+scored by first training the model and then evaluating that model using k-fold cross
+validation. The final score for a set of hyperparameters is the mean of scores across
+all folds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>experiment</strong> (<em>Experiment</em>) – Experiment defining the training and prediction procedure to be optimised.</p></li>
+<li><p><strong>dataset</strong> (<em>Dataset</em>) – Dataset to be used in the hyperparameter search.</p></li>
+<li><p><strong>score_fun</strong> (<em>callable</em>) – Function used to score a hyperparameter set.</p></li>
+<li><p><strong>model_param_grid</strong> (<em>Dict</em><em> or </em><em>Iterable of Dicts</em>) – The model parameter grid. Combinations taken from this grid are passed to the
+model’s __init__ function. Dictionary with parameters names (string) as keys and
+lists of parameter settings to try as values, or a list of such dictionaries,
+in which case the grids spanned by each dictionary in the list are explored.
+This enables searching over any sequence of parameter settings.</p></li>
+<li><p><strong>trainer_param_grid</strong> (<em>Dict</em><em> or </em><em>Iterable of Dicts</em>) – The trainer parameter grid. Combinations taken from this grid are passed to the
+trainers’s train function. Dictionary with parameters names (string) as keys and
+lists of parameter settings to try as values, or a list of such dictionaries,
+in which case the grids spanned by each dictionary in the list are explored.
+This enables searching over any sequence of parameter settings.</p></li>
+<li><p><strong>n_splits</strong> (<em>int</em>) – Number of folds to be used in cross-validation.</p></li>
+<li><p><strong>greater_is_better</strong> (<em>bool</em>) – Whether score_func is a score function (default), meaning high is good, or a loss
+function, meaning low is good.</p></li>
+<li><p><strong>print_progress</strong> (<em>bool</em>) – Whether to print progress. Progress is printed to sys.stderr.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.model_selection package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#podium-model-selection-grid-search-module">podium.model_selection.grid_search module</a></li>
+<li><a class="reference internal" href="#module-podium.model_selection">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.metrics.html"
+                        title="previous chapter">podium.metrics package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.models.html"
+                        title="next chapter">podium.models package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.model_selection.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.models.html" title="podium.models package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.metrics.html" title="podium.metrics package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

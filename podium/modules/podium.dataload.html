@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.dataload package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.dataload.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.datasets package" href="podium.datasets.html" />
+    <link rel="prev" title="podium package" href="podium.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.datasets.html" title="podium.datasets package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.html" title="podium package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" accesskey="U">podium package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-dataload-package">
+<h1>podium.dataload package<a class="headerlink" href="#podium-dataload-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.dataload.cornell_movie_dialogs">
+<span id="podium-dataload-cornell-movie-dialogs-module"></span><h2>podium.dataload.cornell_movie_dialogs module<a class="headerlink" href="#module-podium.dataload.cornell_movie_dialogs" title="Permalink to this headline">¶</a></h2>
+<p>Dataloader for Cornell Movie-Dialogs Corpus, available at
+<a class="reference external" href="http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html">http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html</a></p>
+<dl class="class">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.cornell_movie_dialogs.</code><code class="sig-name descname">CornellMovieDialogsLoader</code><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for downloading and parsing the Cornell Movie-Dialogs dataset.</p>
+<p>This class is used for downloading the dataset (if it’s not already downloaded) and
+parsing the files in the dataset. If it’s not already present
+LargeResource.BASE_RESOURCE_DIR, the dataset is automatically downloaded when an
+instance of the loader is created. The downloaded resources can be parsed using
+the load_dataset method.</p>
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_characters">
+<code class="sig-name descname">load_characters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_characters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads file containing movie characters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_conversations">
+<code class="sig-name descname">load_conversations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_conversations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads file containing movie conversations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_dataset">
+<code class="sig-name descname">load_dataset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads and parses all the necessary files from the dataset folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>data</strong> – tuple that contains dictionaries for 5 types of Cornell movie dialogs data:
+titles, conversations, lines, characters and script urls.
+Fields for every type are defined in class constants.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>CornellMovieDialogsNamedTuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_lines">
+<code class="sig-name descname">load_lines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads file containing movie lines.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_titles">
+<code class="sig-name descname">load_titles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_titles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads file containing movie titles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_urls">
+<code class="sig-name descname">load_urls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsLoader.load_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads file containing movie script urls.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.cornell_movie_dialogs.</code><code class="sig-name descname">CornellMovieDialogsNamedTuple</code><span class="sig-paren">(</span><em class="sig-param">titles</em>, <em class="sig-param">conversations</em>, <em class="sig-param">lines</em>, <em class="sig-param">characters</em>, <em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.characters">
+<em class="property">property </em><code class="sig-name descname">characters</code><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.characters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.conversations">
+<em class="property">property </em><code class="sig-name descname">conversations</code><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.conversations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.lines">
+<em class="property">property </em><code class="sig-name descname">lines</code><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.titles">
+<em class="property">property </em><code class="sig-name descname">titles</code><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.titles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.url">
+<em class="property">property </em><code class="sig-name descname">url</code><a class="headerlink" href="#podium.dataload.cornell_movie_dialogs.CornellMovieDialogsNamedTuple.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.dataload.eurovoc">
+<span id="podium-dataload-eurovoc-module"></span><h2>podium.dataload.eurovoc module<a class="headerlink" href="#module-podium.dataload.eurovoc" title="Permalink to this headline">¶</a></h2>
+<p>Module for loading raw eurovoc dataset</p>
+<dl class="class">
+<dt id="podium.dataload.eurovoc.Document">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.eurovoc.</code><code class="sig-name descname">Document</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">title</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.eurovoc.Document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="method">
+<dt id="podium.dataload.eurovoc.Document.filename">
+<em class="property">property </em><code class="sig-name descname">filename</code><a class="headerlink" href="#podium.dataload.eurovoc.Document.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.eurovoc.Document.text">
+<em class="property">property </em><code class="sig-name descname">text</code><a class="headerlink" href="#podium.dataload.eurovoc.Document.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.dataload.eurovoc.Document.title">
+<em class="property">property </em><code class="sig-name descname">title</code><a class="headerlink" href="#podium.dataload.eurovoc.Document.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.dataload.eurovoc.EuroVocLoader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.eurovoc.</code><code class="sig-name descname">EuroVocLoader</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.eurovoc.EuroVocLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for downloading and parsing the EuroVoc dataset.</p>
+<p>This class is used for downloading the EuroVoc dataset (if it’s not already
+downloaded) and parsing the files in the dataset. If it’s not already present
+LargeResource.BASE_RESOURCE_DIR, the dataset is automatically downloaded when an
+instance of EuroVocLoader is created. The downloaded resources can be parsed using
+the load_dataset method.</p>
+<dl class="method">
+<dt id="podium.dataload.eurovoc.EuroVocLoader.load_dataset">
+<code class="sig-name descname">load_dataset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.eurovoc.EuroVocLoader.load_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads and parses all the necessary files from the dataset folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>(EuroVoc label hierarchy, CroVoc label hierarchy, document mapping,
+documents)</p>
+<p>EuroVoc label hierarchy : dict(label_id : Label)
+CroVoc label hierarchy : dict(label_id : Label)
+document mapping : dict(document_id : list of label ids)
+documents : list(Document)</p>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.dataload.eurovoc.Label">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.eurovoc.</code><code class="sig-name descname">Label</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">id</em>, <em class="sig-param">direct_parents</em>, <em class="sig-param">similar_terms</em>, <em class="sig-param">rank</em>, <em class="sig-param">thesaurus=None</em>, <em class="sig-param">micro_thesaurus=None</em>, <em class="sig-param">all_ancestors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.eurovoc.Label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Label in EuroVoc dataset.</p>
+<p>Labels are assigned to documents. One document has multiple labels.
+Labels have a hierarchy in which one label can have one or more parents (broader
+terms). All labels apart from thesaurus rank labels have at least one parent.
+Apart from parents, labels can also have similar labels which describe related
+areas, but aren’t connected by the label hierarchy.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.dataload.eurovoc.LabelRank">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.eurovoc.</code><code class="sig-name descname">LabelRank</code><a class="headerlink" href="#podium.dataload.eurovoc.LabelRank" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Levels of labels in EuroVoc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.dataload.eurovoc.dill_dataset">
+<code class="sig-prename descclassname">podium.dataload.eurovoc.</code><code class="sig-name descname">dill_dataset</code><span class="sig-paren">(</span><em class="sig-param">output_path</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.eurovoc.dill_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the EuroVoc dataset (if not already present) and stores the dataset in a
+dill file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_path</strong> (<em>str</em>) – Path to the file where the dataset instance will be stored.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="podium-dataload-huggingface-dataset-converter-module">
+<h2>podium.dataload.huggingface_dataset_converter module<a class="headerlink" href="#podium-dataload-huggingface-dataset-converter-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.dataload.ner_croatian">
+<span id="podium-dataload-ner-croatian-module"></span><h2>podium.dataload.ner_croatian module<a class="headerlink" href="#module-podium.dataload.ner_croatian" title="Permalink to this headline">¶</a></h2>
+<p>Simple NERCroatian dataset module.</p>
+<dl class="class">
+<dt id="podium.dataload.ner_croatian.NERCroatianXMLLoader">
+<em class="property">class </em><code class="sig-prename descclassname">podium.dataload.ner_croatian.</code><code class="sig-name descname">NERCroatianXMLLoader</code><span class="sig-paren">(</span><em class="sig-param">path='downloaded_datasets/'</em>, <em class="sig-param">tokenizer='split'</em>, <em class="sig-param">tag_schema='IOB'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.ner_croatian.NERCroatianXMLLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Simple croatian NER class</p>
+<dl class="method">
+<dt id="podium.dataload.ner_croatian.NERCroatianXMLLoader.load_dataset">
+<code class="sig-name descname">load_dataset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.ner_croatian.NERCroatianXMLLoader.load_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads the dataset and returns tokenized NER documents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>tokenized_documents</strong> – List of tokenized documents. Each document is represented
+as a list of tuples (token, label). The sentences in document are
+delimited by tuple (None, None)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of lists of tuples</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.dataload.ner_croatian.convert_sequence_to_entities">
+<code class="sig-prename descclassname">podium.dataload.ner_croatian.</code><code class="sig-name descname">convert_sequence_to_entities</code><span class="sig-paren">(</span><em class="sig-param">sequence</em>, <em class="sig-param">text</em>, <em class="sig-param">delimiter='-'</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.dataload.ner_croatian.convert_sequence_to_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts sequences of the BIO tagging schema to entities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> (<em>list</em><em>(</em><em>string</em><em>)</em>) – Sequence of tags consisting that start with either B, I, or O.</p></li>
+<li><p><strong>label</strong> (<em>list</em><em>(</em><em>string</em><em>)</em>) – Tokenized text that correponds to the tag sequence</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>entities</strong> – List of entities. Each entity is a dict that has four attributes:
+name, type, start, and end. Name is a list of tokens from text
+that belong to that entity, start denotes the index which starts
+the entity, and end is the end index of the entity.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`text[entity['start']</span> <span class="pre">:</span> <span class="pre">entity['end']]`</span></code> retrieves the entity text</p>
+<dl class="simple">
+<dt>This means that the entity has the following form:</dt><dd><p>{                                      ‘name’: list(str),                 ‘type’: str,                       ‘start’: int,                      ‘end’: int                     }</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(dict)</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the given sequence and text are not of the same length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.dataload">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.dataload" title="Permalink to this headline">¶</a></h2>
+<p>Package with concrete datasets dataloaders.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.dataload package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-podium.dataload.cornell_movie_dialogs">podium.dataload.cornell_movie_dialogs module</a></li>
+<li><a class="reference internal" href="#module-podium.dataload.eurovoc">podium.dataload.eurovoc module</a></li>
+<li><a class="reference internal" href="#podium-dataload-huggingface-dataset-converter-module">podium.dataload.huggingface_dataset_converter module</a></li>
+<li><a class="reference internal" href="#module-podium.dataload.ner_croatian">podium.dataload.ner_croatian module</a></li>
+<li><a class="reference internal" href="#module-podium.dataload">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.html"
+                        title="previous chapter">podium package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.datasets.html"
+                        title="next chapter">podium.datasets package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.dataload.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.datasets.html" title="podium.datasets package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.html" title="podium package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

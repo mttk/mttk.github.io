@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.storage.vectorizers package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.storage.vectorizers.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.validation package" href="podium.validation.html" />
+    <link rel="prev" title="podium.storage.resources package" href="podium.storage.resources.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.validation.html" title="podium.validation package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.storage.resources.html" title="podium.storage.resources package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.storage.html" accesskey="U">podium.storage package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-storage-vectorizers-package">
+<h1>podium.storage.vectorizers package<a class="headerlink" href="#podium-storage-vectorizers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.storage.vectorizers.tfidf">
+<span id="podium-storage-vectorizers-tfidf-module"></span><h2>podium.storage.vectorizers.tfidf module<a class="headerlink" href="#module-podium.storage.vectorizers.tfidf" title="Permalink to this headline">¶</a></h2>
+<p>Module contains classes related to creating tfidf vectors from examples.</p>
+<dl class="class">
+<dt id="podium.storage.vectorizers.tfidf.CountVectorizer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vectorizers.tfidf.</code><code class="sig-name descname">CountVectorizer</code><span class="sig-paren">(</span><em class="sig-param">vocab=None</em>, <em class="sig-param">specials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.tfidf.CountVectorizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class converts data from one field in examples to matrix of bag of words features.
+It is equivalent to scikit-learn CountVectorizer available at
+<a class="reference external" href="https://scikit-learn.org">https://scikit-learn.org</a>.</p>
+<dl class="method">
+<dt id="podium.storage.vectorizers.tfidf.CountVectorizer.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">field</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.tfidf.CountVectorizer.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method initializes count vectorizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>Dataset</em><em>, </em><em>optional</em>) – dataset instance which contains field</p></li>
+<li><p><strong>field</strong> (<em>Field</em><em>, </em><em>optional</em>) – which field in dataset to use for vocab, if None vocab given in constructor is
+used</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CountVectorizer</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the vocab or fields vocab are None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.tfidf.CountVectorizer.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">examples</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.tfidf.CountVectorizer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method transforms given examples to count matrix where rows are examples and
+columns represent token counts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>examples</strong> (<em>iterable</em>) – an iterable which yields array with numericalized tokens or list of examples</p></li>
+<li><p><strong>tokens_tensor</strong> (<em>bool</em><em>, </em><em>optional</em>) – if True method expects for examples to be a tensor of numericalized values,
+otherwise it expects to receive list of examples(which can be in fact dataset)
+and a field for numericalization</p></li>
+<li><p><strong>field</strong> (<em>Field</em><em>, </em><em>optional</em>) – if tokens_tensor is False, method expects reference to field that is used for
+numericalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If user has given invalid arguments - if examples are None or the field is not
+    provided and given examples are not in token tensor format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.vectorizers.tfidf.TfIdfVectorizer">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vectorizers.tfidf.</code><code class="sig-name descname">TfIdfVectorizer</code><span class="sig-paren">(</span><em class="sig-param">vocab=None</em>, <em class="sig-param">norm='l2'</em>, <em class="sig-param">use_idf=True</em>, <em class="sig-param">smooth_idf=True</em>, <em class="sig-param">sublinear_tf=False</em>, <em class="sig-param">specials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.tfidf.TfIdfVectorizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.vectorizers.tfidf.CountVectorizer" title="podium.storage.vectorizers.tfidf.CountVectorizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.vectorizers.tfidf.CountVectorizer</span></code></a></p>
+<p>Class converts data from one field in examples to matrix of tf-idf features.
+It is equivalent to scikit-learn TfidfVectorizer available at
+<a class="reference external" href="https://scikit-learn.org">https://scikit-learn.org</a>.
+Class is dependant on TfidfTransformer defined in scikit-learn library.</p>
+<dl class="method">
+<dt id="podium.storage.vectorizers.tfidf.TfIdfVectorizer.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">field</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.tfidf.TfIdfVectorizer.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Learn idf from dataset on data in given field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>Dataset</em>) – dataset instance cointaining data on which to build idf matrix</p></li>
+<li><p><strong>field</strong> (<em>Field</em>) – which field in dataset to use for tfidf</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TfIdfVectorizer</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If dataset or field are None and if name of given field is not in dataset.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.tfidf.TfIdfVectorizer.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">examples</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.tfidf.TfIdfVectorizer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms examples to example-term matrix. Uses vocabulary that is given
+in constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>example</strong> (<em>iterable</em>) – an iterable which yields array with numericalized tokens</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X</strong> – Tf-idf weighted document-term matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>sparse matrix, [n_samples, n_features]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If examples are None.</p></li>
+<li><p><strong>RuntimeError</strong> – If vectorizer is not fitted yet.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.storage.vectorizers.vectorizer">
+<span id="podium-storage-vectorizers-vectorizer-module"></span><h2>podium.storage.vectorizers.vectorizer module<a class="headerlink" href="#module-podium.storage.vectorizers.vectorizer" title="Permalink to this headline">¶</a></h2>
+<p>Module vectorizer offers classes for vectorizing tokens.
+Interface of implemented concrete vectorizers is given in Vectorizer class.</p>
+<dl class="class">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vectorizers.vectorizer.</code><code class="sig-name descname">BasicVectorStorage</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">default_vector_function=&lt;function random_normal_default_vector&gt;</em>, <em class="sig-param">cache_path=None</em>, <em class="sig-param">max_vectors=None</em>, <em class="sig-param">encoding='utf-8'</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#podium.storage.vectorizers.vectorizer.VectorStorage" title="podium.storage.vectorizers.vectorizer.VectorStorage"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.storage.vectorizers.vectorizer.VectorStorage</span></code></a></p>
+<p>Basic implementation of VectorStorage that handles loading vectors from
+system storage.</p>
+<dl class="attribute">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage._vectors">
+<code class="sig-name descname">_vectors</code><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage._vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary offering word to vector mapping</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage._dim">
+<code class="sig-name descname">_dim</code><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage._dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>vector dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage._initialized">
+<code class="sig-name descname">_initialized</code><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage._initialized" title="Permalink to this definition">¶</a></dt>
+<dd><p>has the vector storage been initialized by loading vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage._binary">
+<code class="sig-name descname">_binary</code><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage._binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>if True, the file is read as a binary file.
+Else, it’s read as a plain utf-8 text file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage.get_vector_dim">
+<code class="sig-name descname">get_vector_dim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage.get_vector_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Method returns vector dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dim</strong> – vector dimension</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – if vector storage is not initialized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage.load_all">
+<code class="sig-name descname">load_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage.load_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads all vectors stored in instance path to the vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If instance path is not a valid path.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage.load_vocab">
+<code class="sig-name descname">load_vocab</code><span class="sig-paren">(</span><em class="sig-param">vocab</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage.load_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads vectors for tokens in vocab
+stored in given path to the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vocab</strong> (<em>iterable object</em>) – vocabulary with unique words</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If given path is not a valid path or given vocab is none
+    or if the vector values in vector storage cannot be casted to float.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.BasicVectorStorage.token_to_vector">
+<code class="sig-name descname">token_to_vector</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.BasicVectorStorage.token_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains vector for given token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – token from vocabulary</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vector</strong> – vector representation of given token</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>KeyError</strong> – If given token doesn’t have vector representation and default
+    vector function is not defined (None).</p></li>
+<li><p><strong>ValueError</strong> – If given token is None.</p></li>
+<li><p><strong>RuntimeError</strong> – If vector storage is not initialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage">
+<em class="property">class </em><code class="sig-prename descclassname">podium.storage.vectorizers.vectorizer.</code><code class="sig-name descname">VectorStorage</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">default_vector_function=None</em>, <em class="sig-param">cache_path=None</em>, <em class="sig-param">max_vectors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Interface for classes that can vectorize token. One example of such
+vectorizer is word2vec.</p>
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage.__len__">
+<em class="property">abstract </em><code class="sig-name descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns number of vectors in vector storage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>len</strong> – number of loaded vectors in vector storage</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage.get_embedding_matrix">
+<code class="sig-name descname">get_embedding_matrix</code><span class="sig-paren">(</span><em class="sig-param">vocab=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage.get_embedding_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method constructs embedding matrix.</p>
+<p>Note: From python 3.6 dictionaries preserve insertion order
+<a class="reference external" href="https://docs.python.org/3.6/whatsnew/3.6.html#other-language-changes">https://docs.python.org/3.6/whatsnew/3.6.html#other-language-changes</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vocab</strong> (<em>iter</em><em>(</em><em>token</em><em>)</em>) – collection of tokens for creation of embedding matrix
+default use case is to give this function vocab or itos list
+or <cite>None</cite> if you wish to retrieve all loaded vectors. In case
+<cite>None</cite> is passed as argument, the order of vectors is the same
+as the insertion order of loaded vectors in <cite>VectorStorage</cite>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If vector storage is not initialized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage.get_vector_dim">
+<em class="property">abstract </em><code class="sig-name descname">get_vector_dim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage.get_vector_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Method returns vector dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dim</strong> – vector dimension</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – if vector storage is not initialized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage.load_all">
+<em class="property">abstract </em><code class="sig-name descname">load_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage.load_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads all vectors stored in instance path to the vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If instance path is not a valid path.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage.load_vocab">
+<em class="property">abstract </em><code class="sig-name descname">load_vocab</code><span class="sig-paren">(</span><em class="sig-param">vocab</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage.load_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads vectors for tokens in vocab
+stored in given path to the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vocab</strong> (<em>iterable object</em>) – vocabulary with unique words</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>IOError</strong> – If there was a problem while reading vectors from instance path.</p></li>
+<li><p><strong>ValueError</strong> – If given path is not a valid path or given vocab is none
+    or if the vector values in vector storage cannot be casted to float.</p></li>
+<li><p><strong>RuntimeError</strong> – If different vector size is detected while loading vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.storage.vectorizers.vectorizer.VectorStorage.token_to_vector">
+<em class="property">abstract </em><code class="sig-name descname">token_to_vector</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.VectorStorage.token_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method obtains vector for given token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – token from vocabulary</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vector</strong> – vector representation of given token</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>KeyError</strong> – If given token doesn’t have vector representation and default
+    vector function is not defined (None).</p></li>
+<li><p><strong>ValueError</strong> – If given token is None.</p></li>
+<li><p><strong>RuntimeError</strong> – If vector storage is not initialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.vectorizers.vectorizer.random_normal_default_vector">
+<code class="sig-prename descclassname">podium.storage.vectorizers.vectorizer.</code><code class="sig-name descname">random_normal_default_vector</code><span class="sig-paren">(</span><em class="sig-param">token</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.random_normal_default_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a random vector from a standard normal distribution.
+Dimension of returned array is equal to given dim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<em>str</em>) – string token from vocabulary</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – vector dimension</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vector</strong> – sampled from normal distribution with given dimension</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.storage.vectorizers.vectorizer.zeros_default_vector">
+<code class="sig-prename descclassname">podium.storage.vectorizers.vectorizer.</code><code class="sig-name descname">zeros_default_vector</code><span class="sig-paren">(</span><em class="sig-param">token</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.storage.vectorizers.vectorizer.zeros_default_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for creating default vector for given token in form of zeros
+array. Dimension of returned array is equal to given dim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<em>str</em>) – string token from vocabulary</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – vector dimension</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vector</strong> – zeros vector with given dimension</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>If dim is None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.storage.vectorizers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.storage.vectorizers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.storage.vectorizers package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-podium.storage.vectorizers.tfidf">podium.storage.vectorizers.tfidf module</a></li>
+<li><a class="reference internal" href="#module-podium.storage.vectorizers.vectorizer">podium.storage.vectorizers.vectorizer module</a></li>
+<li><a class="reference internal" href="#module-podium.storage.vectorizers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.storage.resources.html"
+                        title="previous chapter">podium.storage.resources package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.validation.html"
+                        title="next chapter">podium.validation package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.storage.vectorizers.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.validation.html" title="podium.validation package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.storage.resources.html" title="podium.storage.resources package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.storage.html" >podium.storage package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>

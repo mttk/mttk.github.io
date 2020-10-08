@@ -1,0 +1,1770 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>podium.datasets.impl package &#8212; Podium 2020 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="podium/modules/podium.datasets.impl.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="podium.metrics package" href="podium.metrics.html" />
+    <link rel="prev" title="podium.datasets package" href="podium.datasets.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.metrics.html" title="podium.metrics package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="podium.datasets.html" title="podium.datasets package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.datasets.html" accesskey="U">podium.datasets package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="podium-datasets-impl-package">
+<h1>podium.datasets.impl package<a class="headerlink" href="#podium-datasets-impl-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podium.datasets.impl.catacx_comments_dataset">
+<span id="podium-datasets-impl-catacx-comments-dataset-module"></span><h2>podium.datasets.impl.catacx_comments_dataset module<a class="headerlink" href="#module-podium.datasets.impl.catacx_comments_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains the catacx dataset.</p>
+<dl class="class">
+<dt id="podium.datasets.impl.catacx_comments_dataset.CatacxCommentsDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.catacx_comments_dataset.</code><code class="sig-name descname">CatacxCommentsDataset</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.catacx_comments_dataset.CatacxCommentsDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Simple Catacx dataset. Contains only the comments.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.catacx_comments_dataset.CatacxCommentsDataset.get_dataset">
+<em class="property">static </em><code class="sig-name descname">get_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.catacx_comments_dataset.CatacxCommentsDataset.get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads (if necessary) and loads the dataset. Not supported yet.
+Raises NotImplementedError if called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em>) – dictionary that maps field name to the field
+if passed None the default set of fields will be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The loaded dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CatacxCommentsDataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.catacx_comments_dataset.CatacxCommentsDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.catacx_comments_dataset.CatacxCommentsDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns a dict of default Catacx comment fields.
+fields : author_name, author_id, id, likes_cnt, message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – dict containing all default Catacx fields</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.catacx_dataset">
+<span id="podium-datasets-impl-catacx-dataset-module"></span><h2>podium.datasets.impl.catacx_dataset module<a class="headerlink" href="#module-podium.datasets.impl.catacx_dataset" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="podium.datasets.impl.catacx_dataset.CatacxDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.catacx_dataset.</code><code class="sig-name descname">CatacxDataset</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.catacx_dataset.CatacxDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.hierarhical_dataset.HierarchicalDataset" title="podium.datasets.hierarhical_dataset.HierarchicalDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.hierarhical_dataset.HierarchicalDataset</span></code></a></p>
+<p>Catacx dataset.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.catacx_dataset.CatacxDataset.get_dataset">
+<em class="property">static </em><code class="sig-name descname">get_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.catacx_dataset.CatacxDataset.get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads (if necessary) and loads the dataset. Not supported yet.
+Raises NotImplementedError if called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em>) – dictionary that maps field name to the field
+if passed None the default set of fields will be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The loaded dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CatacxDataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.catacx_dataset.CatacxDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.catacx_dataset.CatacxDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns a dict of default Catacx fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – dict containing all default Catacx fields</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.conllu_dataset">
+<span id="podium-datasets-impl-conllu-dataset-module"></span><h2>podium.datasets.impl.conllu_dataset module<a class="headerlink" href="#module-podium.datasets.impl.conllu_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains the CoNLL-U dataset.</p>
+<dl class="class">
+<dt id="podium.datasets.impl.conllu_dataset.CoNLLUDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.conllu_dataset.</code><code class="sig-name descname">CoNLLUDataset</code><span class="sig-paren">(</span><em class="sig-param">file_path</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.conllu_dataset.CoNLLUDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>A CoNLL-U dataset class. This class uses all default CoNLL-U fields.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.conllu_dataset.CoNLLUDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.conllu_dataset.CoNLLUDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns a dict of default CoNLL-U fields.
+fields : id, form, lemma, upos, xpos, feats, head, deprel, deps, misc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dict containing all default CoNLL-U fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.cornell_movie_dialogs_dataset">
+<span id="podium-datasets-impl-cornell-movie-dialogs-dataset-module"></span><h2>podium.datasets.impl.cornell_movie_dialogs_dataset module<a class="headerlink" href="#module-podium.datasets.impl.cornell_movie_dialogs_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains Cornell Movie Dialogs datasets.</p>
+<dl class="class">
+<dt id="podium.datasets.impl.cornell_movie_dialogs_dataset.CornellMovieDialogsConversationalDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.cornell_movie_dialogs_dataset.</code><code class="sig-name descname">CornellMovieDialogsConversationalDataset</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.cornell_movie_dialogs_dataset.CornellMovieDialogsConversationalDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Cornell Movie Dialogs Conversational dataset which contains sentences and replies
+from movies.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.cornell_movie_dialogs_dataset.CornellMovieDialogsConversationalDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.cornell_movie_dialogs_dataset.CornellMovieDialogsConversationalDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default Cornell Movie Dialogs fields: sentence and reply.
+Fields share same vocabulary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.croatian_ner_dataset">
+<span id="podium-datasets-impl-croatian-ner-dataset-module"></span><h2>podium.datasets.impl.croatian_ner_dataset module<a class="headerlink" href="#module-podium.datasets.impl.croatian_ner_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains Croatian NER dataset.</p>
+<dl class="class">
+<dt id="podium.datasets.impl.croatian_ner_dataset.CroatianNERDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.croatian_ner_dataset.</code><code class="sig-name descname">CroatianNERDataset</code><span class="sig-paren">(</span><em class="sig-param">tokenized_documents</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.croatian_ner_dataset.CroatianNERDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Croatian NER dataset.</p>
+<p>A single example in the dataset represents a single sentence in
+the input data.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.croatian_ner_dataset.CroatianNERDataset.get_dataset">
+<em class="property">classmethod </em><code class="sig-name descname">get_dataset</code><span class="sig-paren">(</span><em class="sig-param">tokenizer='split'</em>, <em class="sig-param">tag_schema='IOB'</em>, <em class="sig-param">fields=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.croatian_ner_dataset.CroatianNERDataset.get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method downloads (if necessary) and loads the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tokenizer</strong> (<em>str | callable</em>) – Word-level tokenizer used to tokenize the input text</p></li>
+<li><p><strong>tag_schema</strong> (<em>str</em>) – <p>Tag schema used for constructing the token labels</p>
+<dl class="simple">
+<dt>supported tag schemas:</dt><dd><p>’IOB’: the label of the beginning token of the entity is
+prefixed with ‘B-‘, the remaining tokens that belong to the
+same entity are prefixed with ‘I-‘. The tokens that don’t
+belong to any named entity are labeled ‘O’</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em>) – dictionary mapping field names to fields. If set to None, the
+default fields are used.</p></li>
+<li><p><strong>**kwargs</strong> – <dl class="simple">
+<dt>SCPLargeResource.SCP_USER_KEY:</dt><dd><p>User on the host machine. Not required if the user on the
+local machine matches the user on the host machine.</p>
+</dd>
+<dt>SCPLargeResource.SCP_PRIVATE_KEY:</dt><dd><p>Path to the ssh private key eligible to access the host
+machine. Not required on Unix if the private is in the default
+location.</p>
+</dd>
+<dt>SCPLargeResource.SCP_PASS_KEY:</dt><dd><p>Password for the ssh private key (optional). Can be omitted
+if the private key is not encrypted.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The loaded dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CroatianNERDataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.croatian_ner_dataset.CroatianNERDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.croatian_ner_dataset.CroatianNERDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default Croatian NER dataset fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.eurovoc_dataset">
+<span id="podium-datasets-impl-eurovoc-dataset-module"></span><h2>podium.datasets.impl.eurovoc_dataset module<a class="headerlink" href="#module-podium.datasets.impl.eurovoc_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains EuroVoc dataset.</p>
+<dl class="class">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.eurovoc_dataset.</code><code class="sig-name descname">EuroVocDataset</code><span class="sig-paren">(</span><em class="sig-param">eurovoc_labels</em>, <em class="sig-param">crovoc_labels</em>, <em class="sig-param">documents</em>, <em class="sig-param">mappings</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>EuroVoc dataset class that contains labeled documents and the label hierarchy.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_all_ancestors">
+<code class="sig-name descname">get_all_ancestors</code><span class="sig-paren">(</span><em class="sig-param">label_id</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_all_ancestors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ids of all ancestors of the label with the given label id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label_id</strong> (<em>int</em>) – id of the label</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of label_ids of all ancestors of the given label or None if the
+label is not present in the dataset label hierarchies</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_crovoc_label_hierarchy">
+<code class="sig-name descname">get_crovoc_label_hierarchy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_crovoc_label_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns CroVoc label hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dict(int</strong> – dictionary that maps label id to label</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Label)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default EuroVoc fields: title, text, eurovoc and crovoc labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_direct_parents">
+<code class="sig-name descname">get_direct_parents</code><span class="sig-paren">(</span><em class="sig-param">label_id</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_direct_parents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ids of direct parents of the label with the given label id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label_id</strong> (<em>int</em>) – id of the label</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of label_ids of all direct parents of the given label or None if the
+label is not present in the dataset label hierarchies</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_eurovoc_label_hierarchy">
+<code class="sig-name descname">get_eurovoc_label_hierarchy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset.get_eurovoc_label_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the EuroVoc label hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dict(int</strong> – dictionary that maps label id to label</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Label)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.eurovoc_dataset.EuroVocDataset.is_ancestor">
+<code class="sig-name descname">is_ancestor</code><span class="sig-paren">(</span><em class="sig-param">label_id</em>, <em class="sig-param">example</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.EuroVocDataset.is_ancestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the given label_id is an ancestor of any labels of the example.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_id</strong> (<em>int</em>) – id of the label</p></li>
+<li><p><strong>example</strong> (<em>Example</em>) – example from dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if label is ancestor to any of the example labels, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="podium.datasets.impl.eurovoc_dataset.remove_nonalpha_and_stopwords">
+<code class="sig-prename descclassname">podium.datasets.impl.eurovoc_dataset.</code><code class="sig-name descname">remove_nonalpha_and_stopwords</code><span class="sig-paren">(</span><em class="sig-param">raw</em>, <em class="sig-param">tokenized</em>, <em class="sig-param">stop_words</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.eurovoc_dataset.remove_nonalpha_and_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all non alphabetical characters and stop words from tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> (<em>string</em>) – raw text</p></li>
+<li><p><strong>tokenized</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – tokenized text</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple(str, list(str))</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.imdb_sentiment_dataset">
+<span id="podium-datasets-impl-imdb-sentiment-dataset-module"></span><h2>podium.datasets.impl.imdb_sentiment_dataset module<a class="headerlink" href="#module-podium.datasets.impl.imdb_sentiment_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains IMDB Large Movie Review Dataset
+Dataset webpage: <a class="reference external" href="http://ai.stanford.edu/~amaas/data/sentiment/">http://ai.stanford.edu/~amaas/data/sentiment/</a></p>
+<dl class="simple">
+<dt>When using this dataset, please cite:</dt><dd><p>&#64;InProceedings{maas-EtAl:2011:ACL-HLT2011,
+author    = {Maas, Andrew L.  and  Daly, Raymond E.  and  Pham, Peter T.  and
+Huang, Dan  and  Ng, Andrew Y.  and  Potts, Christopher},
+title     = {Learning Word Vectors for Sentiment Analysis},
+booktitle = {Proceedings of the 49th Annual Meeting of the Association for
+Computational Linguistics: Human Language Technologies},
+month     = {June},
+year      = {2011},
+address   = {Portland, Oregon, USA},
+publisher = {Association for Computational Linguistics},
+pages     = {142–150},
+url       = {http://www.aclweb.org/anthology/P11-1015}
+}</p>
+</dd>
+</dl>
+<dl class="class">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.imdb_sentiment_dataset.</code><code class="sig-name descname">IMDB</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Simple Imdb dataset with only supervised data which uses non processed data.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>dataset name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>url to the imdb dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the folder in the dataset containing train and test directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>string that defines archive type, used for unpacking dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.TRAIN_DIR">
+<code class="sig-name descname">TRAIN_DIR</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.TRAIN_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the training directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.TEST_DIR">
+<code class="sig-name descname">TEST_DIR</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.TEST_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the directory containing test examples</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.POSITIVE_LABEL_DIR">
+<code class="sig-name descname">POSITIVE_LABEL_DIR</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.POSITIVE_LABEL_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the subdirectory containing examples with positive sentiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.NEGATIVE_LABEL_DIR">
+<code class="sig-name descname">NEGATIVE_LABEL_DIR</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.NEGATIVE_LABEL_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the subdirectory containing examples with negative sentiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.TEXT_FIELD_NAME">
+<code class="sig-name descname">TEXT_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.TEXT_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the field containing comment text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.LABEL_FIELD_NAME">
+<code class="sig-name descname">LABEL_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.LABEL_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the field containing label value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.POSITIVE_LABEL">
+<code class="sig-name descname">POSITIVE_LABEL</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.POSITIVE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>positive sentiment label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.NEGATIVE_LABEL">
+<code class="sig-name descname">NEGATIVE_LABEL</code><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.NEGATIVE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>negative sentiment label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.get_dataset_splits">
+<em class="property">static </em><code class="sig-name descname">get_dataset_splits</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.get_dataset_splits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates train and test dataset for Imdb dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – dictionary mapping field name to field, if not given method will
+use <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code>. User should use default field names
+defined in class attributes.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, test_dataset)</strong> – tuple containing train dataset and test dataset</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.imdb_sentiment_dataset.IMDB.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.imdb_sentiment_dataset.IMDB.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default Imdb fields: text and label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl.pauza_dataset">
+<span id="podium-datasets-impl-pauza-dataset-module"></span><h2>podium.datasets.impl.pauza_dataset module<a class="headerlink" href="#module-podium.datasets.impl.pauza_dataset" title="Permalink to this headline">¶</a></h2>
+<p>Module contains PauzaHR datasets.</p>
+<dl class="class">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.pauza_dataset.</code><code class="sig-name descname">PauzaHRDataset</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Simple PauzaHR dataset class which uses original reviews.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>url to the PauzaHR dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>dataset name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the folder in the dataset containing train and test directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>string that defines archive type, used for unpacking dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.TRAIN_DIR">
+<code class="sig-name descname">TRAIN_DIR</code><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.TRAIN_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the training directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.TEST_DIR">
+<code class="sig-name descname">TEST_DIR</code><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.TEST_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the directory containing test examples</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default PauzaHR fields: rating, source and text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.pauza_dataset.PauzaHRDataset.get_train_test_dataset">
+<em class="property">static </em><code class="sig-name descname">get_train_test_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.pauza_dataset.PauzaHRDataset.get_train_test_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates train and test dataset for PauzaHR dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – dictionary mapping field name to field, if not given method will
+use <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, test_dataset)</strong> – tuple containing train dataset and test dataset</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-podium.datasets.impl">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-podium.datasets.impl" title="Permalink to this headline">¶</a></h2>
+<p>Package contains concrete datasets</p>
+<dl class="class">
+<dt id="podium.datasets.impl.IMDB">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">IMDB</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.IMDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Simple Imdb dataset with only supervised data which uses non processed data.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.IMDB.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>dataset name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.IMDB.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>url to the imdb dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.IMDB.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the folder in the dataset containing train and test directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.IMDB.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>string that defines archive type, used for unpacking dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.TRAIN_DIR">
+<code class="sig-name descname">TRAIN_DIR</code><a class="headerlink" href="#podium.datasets.impl.IMDB.TRAIN_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the training directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.TEST_DIR">
+<code class="sig-name descname">TEST_DIR</code><a class="headerlink" href="#podium.datasets.impl.IMDB.TEST_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the directory containing test examples</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.POSITIVE_LABEL_DIR">
+<code class="sig-name descname">POSITIVE_LABEL_DIR</code><a class="headerlink" href="#podium.datasets.impl.IMDB.POSITIVE_LABEL_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the subdirectory containing examples with positive sentiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.NEGATIVE_LABEL_DIR">
+<code class="sig-name descname">NEGATIVE_LABEL_DIR</code><a class="headerlink" href="#podium.datasets.impl.IMDB.NEGATIVE_LABEL_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the subdirectory containing examples with negative sentiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.TEXT_FIELD_NAME">
+<code class="sig-name descname">TEXT_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.IMDB.TEXT_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the field containing comment text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.LABEL_FIELD_NAME">
+<code class="sig-name descname">LABEL_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.IMDB.LABEL_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the field containing label value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.POSITIVE_LABEL">
+<code class="sig-name descname">POSITIVE_LABEL</code><a class="headerlink" href="#podium.datasets.impl.IMDB.POSITIVE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>positive sentiment label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.IMDB.NEGATIVE_LABEL">
+<code class="sig-name descname">NEGATIVE_LABEL</code><a class="headerlink" href="#podium.datasets.impl.IMDB.NEGATIVE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>negative sentiment label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.IMDB.get_dataset_splits">
+<em class="property">static </em><code class="sig-name descname">get_dataset_splits</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.IMDB.get_dataset_splits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates train and test dataset for Imdb dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – dictionary mapping field name to field, if not given method will
+use <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code>. User should use default field names
+defined in class attributes.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, test_dataset)</strong> – tuple containing train dataset and test dataset</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.IMDB.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.IMDB.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default Imdb fields: text and label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.CatacxDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">CatacxDataset</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CatacxDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.hierarhical_dataset.HierarchicalDataset" title="podium.datasets.hierarhical_dataset.HierarchicalDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.hierarhical_dataset.HierarchicalDataset</span></code></a></p>
+<p>Catacx dataset.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.CatacxDataset.get_dataset">
+<em class="property">static </em><code class="sig-name descname">get_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CatacxDataset.get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads (if necessary) and loads the dataset. Not supported yet.
+Raises NotImplementedError if called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em>) – dictionary that maps field name to the field
+if passed None the default set of fields will be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The loaded dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CatacxDataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.CatacxDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CatacxDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns a dict of default Catacx fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – dict containing all default Catacx fields</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.CoNLLUDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">CoNLLUDataset</code><span class="sig-paren">(</span><em class="sig-param">file_path</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CoNLLUDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>A CoNLL-U dataset class. This class uses all default CoNLL-U fields.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.CoNLLUDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CoNLLUDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns a dict of default CoNLL-U fields.
+fields : id, form, lemma, upos, xpos, feats, head, deprel, deps, misc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dict containing all default CoNLL-U fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.CornellMovieDialogsConversationalDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">CornellMovieDialogsConversationalDataset</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CornellMovieDialogsConversationalDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Cornell Movie Dialogs Conversational dataset which contains sentences and replies
+from movies.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.CornellMovieDialogsConversationalDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.CornellMovieDialogsConversationalDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default Cornell Movie Dialogs fields: sentence and reply.
+Fields share same vocabulary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.EuroVocDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">EuroVocDataset</code><span class="sig-paren">(</span><em class="sig-param">eurovoc_labels</em>, <em class="sig-param">crovoc_labels</em>, <em class="sig-param">documents</em>, <em class="sig-param">mappings</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>EuroVoc dataset class that contains labeled documents and the label hierarchy.</p>
+<dl class="method">
+<dt id="podium.datasets.impl.EuroVocDataset.get_all_ancestors">
+<code class="sig-name descname">get_all_ancestors</code><span class="sig-paren">(</span><em class="sig-param">label_id</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset.get_all_ancestors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ids of all ancestors of the label with the given label id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label_id</strong> (<em>int</em>) – id of the label</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of label_ids of all ancestors of the given label or None if the
+label is not present in the dataset label hierarchies</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.EuroVocDataset.get_crovoc_label_hierarchy">
+<code class="sig-name descname">get_crovoc_label_hierarchy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset.get_crovoc_label_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns CroVoc label hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dict(int</strong> – dictionary that maps label id to label</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Label)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.EuroVocDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default EuroVoc fields: title, text, eurovoc and crovoc labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.EuroVocDataset.get_direct_parents">
+<code class="sig-name descname">get_direct_parents</code><span class="sig-paren">(</span><em class="sig-param">label_id</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset.get_direct_parents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ids of direct parents of the label with the given label id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label_id</strong> (<em>int</em>) – id of the label</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of label_ids of all direct parents of the given label or None if the
+label is not present in the dataset label hierarchies</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.EuroVocDataset.get_eurovoc_label_hierarchy">
+<code class="sig-name descname">get_eurovoc_label_hierarchy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset.get_eurovoc_label_hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the EuroVoc label hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dict(int</strong> – dictionary that maps label id to label</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Label)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.EuroVocDataset.is_ancestor">
+<code class="sig-name descname">is_ancestor</code><span class="sig-paren">(</span><em class="sig-param">label_id</em>, <em class="sig-param">example</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.EuroVocDataset.is_ancestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the given label_id is an ancestor of any labels of the example.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_id</strong> (<em>int</em>) – id of the label</p></li>
+<li><p><strong>example</strong> (<em>Example</em>) – example from dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if label is ancestor to any of the example labels, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.PauzaHRDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">PauzaHRDataset</code><span class="sig-paren">(</span><em class="sig-param">dir_path</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>Simple PauzaHR dataset class which uses original reviews.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.PauzaHRDataset.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>url to the PauzaHR dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.PauzaHRDataset.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>dataset name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.PauzaHRDataset.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the folder in the dataset containing train and test directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.PauzaHRDataset.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>string that defines archive type, used for unpacking dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.PauzaHRDataset.TRAIN_DIR">
+<code class="sig-name descname">TRAIN_DIR</code><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.TRAIN_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the training directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.PauzaHRDataset.TEST_DIR">
+<code class="sig-name descname">TEST_DIR</code><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.TEST_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the directory containing test examples</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.PauzaHRDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default PauzaHR fields: rating, source and text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.PauzaHRDataset.get_train_test_dataset">
+<em class="property">static </em><code class="sig-name descname">get_train_test_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.PauzaHRDataset.get_train_test_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates train and test dataset for PauzaHR dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – dictionary mapping field name to field, if not given method will
+use <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, test_dataset)</strong> – tuple containing train dataset and test dataset</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.SNLIDataset">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">SNLIDataset</code><span class="sig-paren">(</span><em class="sig-param">file_path</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SNLIDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.impl.snli_dataset.SNLISimple</span></code></p>
+<p>A SNLI Dataset class. Unlike <cite>SNLISimple</cite>, this class
+includes all the fields included in the SNLI dataset by default.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to the SNLI dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the directory in which the dataset files are stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Archive type, i.e. compression method used for archiving the
+downloaded dataset file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.TRAIN_FILE_NAME">
+<code class="sig-name descname">TRAIN_FILE_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.TRAIN_FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the file in which the train dataset is stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.TEST_FILE_NAME">
+<code class="sig-name descname">TEST_FILE_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.TEST_FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the file in which the test dataset is stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.DEV_FILE_NAME">
+<code class="sig-name descname">DEV_FILE_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.DEV_FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the file in which the dev (validation) dataset is stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.ANNOTATOR_LABELS_FIELD_NAME">
+<code class="sig-name descname">ANNOTATOR_LABELS_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.ANNOTATOR_LABELS_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing annotator labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.CAPTION_ID_FIELD_NAME">
+<code class="sig-name descname">CAPTION_ID_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.CAPTION_ID_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing caption ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.GOLD_LABEL_FIELD_NAME">
+<code class="sig-name descname">GOLD_LABEL_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.GOLD_LABEL_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing gold label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.PAIR_ID_FIELD_NAME">
+<code class="sig-name descname">PAIR_ID_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.PAIR_ID_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing pair ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.SENTENCE1_FIELD_NAME">
+<code class="sig-name descname">SENTENCE1_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.SENTENCE1_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence1</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.SENTENCE1_PARSE_FIELD_NAME">
+<code class="sig-name descname">SENTENCE1_PARSE_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.SENTENCE1_PARSE_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence1 parse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.SENTENCE1_BINARY_PARSE_FIELD_NAME">
+<code class="sig-name descname">SENTENCE1_BINARY_PARSE_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.SENTENCE1_BINARY_PARSE_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence1 binary parse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.SENTENCE2_FIELD_NAME">
+<code class="sig-name descname">SENTENCE2_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.SENTENCE2_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.SENTENCE2_PARSE_FIELD_NAME">
+<code class="sig-name descname">SENTENCE2_PARSE_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.SENTENCE2_PARSE_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence2 parse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLIDataset.SENTENCE2_BINARY_PARSE_FIELD_NAME">
+<code class="sig-name descname">SENTENCE2_BINARY_PARSE_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.SENTENCE2_BINARY_PARSE_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence2 binary parse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.SNLIDataset.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns all SNLI fields in the following order:
+annotator_labels, captionID, gold_label, pairID,
+sentence1, sentence1_parse, sentence1_binary_parse,
+sentence2, sentence2_parse, sentence2_binary_parse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field names to respective Fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This dataset includes both parses for every sentence,</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.SNLIDataset.get_train_test_dev_dataset">
+<em class="property">static </em><code class="sig-name descname">get_train_test_dev_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SNLIDataset.get_train_test_dev_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates train, test and dev (validation) Datasets
+for the SNLI dataset. If the <cite>snli_1.0</cite> directory is not
+present in the current/working directory, it will be
+downloaded automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – A dictionary that maps field names to Field objects.
+If not supplied, <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code> is used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, test_dataset, dev_dataset)</strong> – A tuple containing train, test and dev Datasets respectively.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.SNLISimple">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">SNLISimple</code><span class="sig-paren">(</span><em class="sig-param">file_path</em>, <em class="sig-param">fields</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SNLISimple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>A Simple SNLI Dataset class. This class only uses three fields by default:
+gold_label, sentence1, sentence2.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to the SNLI dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the directory in which the dataset files are stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Archive type, i.e. compression method used for archiving the
+downloaded dataset file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.TRAIN_FILE_NAME">
+<code class="sig-name descname">TRAIN_FILE_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.TRAIN_FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the file in which the train dataset is stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.TEST_FILE_NAME">
+<code class="sig-name descname">TEST_FILE_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.TEST_FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the file in which the test dataset is stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.DEV_FILE_NAME">
+<code class="sig-name descname">DEV_FILE_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.DEV_FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the file in which the dev (validation) dataset is stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.GOLD_LABEL_FIELD_NAME">
+<code class="sig-name descname">GOLD_LABEL_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.GOLD_LABEL_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing gold label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.SENTENCE1_FIELD_NAME">
+<code class="sig-name descname">SENTENCE1_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.SENTENCE1_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence1</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SNLISimple.SENTENCE2_FIELD_NAME">
+<code class="sig-name descname">SENTENCE2_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SNLISimple.SENTENCE2_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the field containing sentence2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.SNLISimple.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SNLISimple.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns the three main SNLI fields in the following order:
+gold_label, sentence1, sentence2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field names to respective Fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.SNLISimple.get_train_test_dev_dataset">
+<em class="property">static </em><code class="sig-name descname">get_train_test_dev_dataset</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SNLISimple.get_train_test_dev_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates train, test and dev (validation) Datasets
+for the SNLI dataset. If the <cite>snli_1.0</cite> directory is not
+present in the current/working directory, it will be
+downloaded automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – A dictionary that maps field names to Field objects.
+If not supplied, <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code> is used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, test_dataset, dev_dataset)</strong> – A tuple containing train, test and dev Datasets respectively.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podium.datasets.impl.SST">
+<em class="property">class </em><code class="sig-prename descclassname">podium.datasets.impl.</code><code class="sig-name descname">SST</code><span class="sig-paren">(</span><em class="sig-param">file_path</em>, <em class="sig-param">fields</em>, <em class="sig-param">fine_grained=False</em>, <em class="sig-param">subtrees=False</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="podium.datasets.html#podium.datasets.dataset.Dataset" title="podium.datasets.dataset.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">podium.datasets.dataset.Dataset</span></code></a></p>
+<p>The Stanford sentiment treebank dataset.</p>
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.NAME">
+<code class="sig-name descname">NAME</code><a class="headerlink" href="#podium.datasets.impl.SST.NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>dataset name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.URL">
+<code class="sig-name descname">URL</code><a class="headerlink" href="#podium.datasets.impl.SST.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>url to the SST dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.DATASET_DIR">
+<code class="sig-name descname">DATASET_DIR</code><a class="headerlink" href="#podium.datasets.impl.SST.DATASET_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the folder in the dataset containing train and test directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.ARCHIVE_TYPE">
+<code class="sig-name descname">ARCHIVE_TYPE</code><a class="headerlink" href="#podium.datasets.impl.SST.ARCHIVE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>string that defines archive type, used for unpacking dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.TEXT_FIELD_NAME">
+<code class="sig-name descname">TEXT_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SST.TEXT_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the field containing comment text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.LABEL_FIELD_NAME">
+<code class="sig-name descname">LABEL_FIELD_NAME</code><a class="headerlink" href="#podium.datasets.impl.SST.LABEL_FIELD_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the field containing label value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.POSITIVE_LABEL">
+<code class="sig-name descname">POSITIVE_LABEL</code><a class="headerlink" href="#podium.datasets.impl.SST.POSITIVE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>positive sentiment label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podium.datasets.impl.SST.NEGATIVE_LABEL">
+<code class="sig-name descname">NEGATIVE_LABEL</code><a class="headerlink" href="#podium.datasets.impl.SST.NEGATIVE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>negative sentiment label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.SST.get_dataset_splits">
+<em class="property">static </em><code class="sig-name descname">get_dataset_splits</code><span class="sig-paren">(</span><em class="sig-param">fields=None</em>, <em class="sig-param">fine_grained=False</em>, <em class="sig-param">subtrees=False</em><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SST.get_dataset_splits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method loads and creates dataset splits for the SST dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fields</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>Field</em><em>)</em><em>, </em><em>optional</em>) – dictionary mapping field name to field, if not given method will
+use <code class="docutils literal notranslate"><span class="pre">`get_default_fields`</span></code>. User should use default field names
+defined in class attributes.</p></li>
+<li><p><strong>fine_grained</strong> (<em>bool</em>) – if false, returns the binary (positive/negative) SST dataset
+and filters out neutral examples. If this is <cite>False</cite>, please
+set your Fields <em>not</em> to be eager.</p></li>
+<li><p><strong>subtrees</strong> (<em>bool</em>) – also return the subtrees of each input instance as separate
+instances. This causes the dataset to become much larger.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>(train_dataset, valid_dataset, test_dataset)</strong> – tuple containing train, valid and test dataset</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Dataset, Dataset, Dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="podium.datasets.impl.SST.get_default_fields">
+<em class="property">static </em><code class="sig-name descname">get_default_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#podium.datasets.impl.SST.get_default_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns default Imdb fields: text and label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>fields</strong> – Dictionary mapping field name to field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict(str, Field)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">podium.datasets.impl package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.catacx_comments_dataset">podium.datasets.impl.catacx_comments_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.catacx_dataset">podium.datasets.impl.catacx_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.conllu_dataset">podium.datasets.impl.conllu_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.cornell_movie_dialogs_dataset">podium.datasets.impl.cornell_movie_dialogs_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.croatian_ner_dataset">podium.datasets.impl.croatian_ner_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.eurovoc_dataset">podium.datasets.impl.eurovoc_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.imdb_sentiment_dataset">podium.datasets.impl.imdb_sentiment_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl.pauza_dataset">podium.datasets.impl.pauza_dataset module</a></li>
+<li><a class="reference internal" href="#module-podium.datasets.impl">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="podium.datasets.html"
+                        title="previous chapter">podium.datasets package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="podium.metrics.html"
+                        title="next chapter">podium.metrics package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/podium.datasets.impl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="podium.metrics.html" title="podium.metrics package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="podium.datasets.html" title="podium.datasets package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Podium 2020 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >podium</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="podium.html" >podium package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="podium.datasets.html" >podium.datasets package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, TakeLab, FER, Zagreb.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.2.
+    </div>
+  </body>
+</html>
