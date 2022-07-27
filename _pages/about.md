@@ -8,6 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fifth year PhD student in NLP at the [Text Analysis and Knowledge Engineering Lab](http://takelab.fer.hr/) at the University of Zagreb, supervised by [Jan Šnajder](http://www.zemris.fer.hr/~jan/).
-
-WIP
+Incoming postdoctoral researcher at the [UKP lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp), TU Darmstadt. Obtained my PhD from the University of Zagreb under supervision of [Jan Šnajder](http://www.zemris.fer.hr/~jan/).
