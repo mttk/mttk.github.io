@@ -15,7 +15,7 @@ Previously, I did a postdoc at the [UKP Lab](https://www.informatik.tu-darmstadt
 News
 ======
 February 2024.
-- I have started as a postdoc at [Technion], working with [Yonatan Belinkov](https://belinkov.com/)!
+- I have started as a postdoc at [Technion](https://www.technion.ac.il/en/home-2/), working with [Yonatan Belinkov](https://belinkov.com/)!
 
 January 2024.
 - New preprint: [Code Prompting Elicits Conditional Reasoning Abilities in Text+Code LLMs](https://arxiv.org/abs/2401.10065)
