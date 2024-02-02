@@ -24,5 +24,5 @@ News
 - [BLOOD: Out-of-Distribution Detection by Leveraging Between-Layer Transformation Smoothness](https://arxiv.org/abs/2310.02832) is accepted to [ICLR 2024](https://iclr.cc/) as a poster!
 
 **December 2023.**
-- 🎄🎄🎄 Happy holidays 🎄🎄🎄
+- 🎄🎄🎄 **Happy holidays** 🎄🎄🎄
 - I'm area chairing the ARR December Interpretability and Analysis of Models for NLP track
