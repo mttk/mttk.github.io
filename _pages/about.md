@@ -12,7 +12,7 @@ I'm a postdoc at Technion working with [Yonatan Belinkov](https://belinkov.com/)
 
 Previously, I did a postdoc at the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at TU Darmstadt working on the [InterText](https://intertext.ukp-lab.de/) initiative, while I obtained my PhD at the University of Zagreb under supervision of [Jan Šnajder](http://www.zemris.fer.hr/~jan/). Before my PhD I worked at the European Commission's [Joint Research Centre](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/joint-research-centre_en) in Ispra on using NLP to update the the [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030).
 
-I am currently on the job for academic opportunities. Check my [CV](https://mttk.github.io/files/CV_Tutek_Martin_Mar_2024.pdf)
+I am currently on the job for academic opportunities. Check my [CV](https://mttk.github.io/files/CV_Tutek_Martin_Mar_2024.pdf) and [reach out](https://mttk.github.io/contact/) if you believe me a good fit.
 
 News
 ======
