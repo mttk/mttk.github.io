@@ -6,5 +6,5 @@ main:
   - title: "CV"
     url: /files/CV_Tutek_Martin_Mar_2024.pdf
     
-  # - title: "Publications"
-  #   url: /publications/
+  - title: "Contact"
+    url: /contact/
