@@ -81,10 +81,10 @@ author:
   name             : "Martin Tutek"
   avatar           : "profile.jpeg"
   bio              : "NLP & ML / Representation Learning"
-  location         : "Zagreb, Croatia"
-  employer         : "TakeLab @ UNIZG"
+  location         :
+  employer         : "Technion"
   googlescholar    : "https://scholar.google.hr/citations?user=3MK-3e0AAAAJ"
-  email            : "martin.tutek@gmail.com"
+  email            :
   uri              :
   bitbucket        :
   codepen          :
