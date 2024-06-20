@@ -16,11 +16,14 @@ I am currently on the job market for academic opportunities. Check my [CV](https
 
 News
 ======
+**June 2024.**
+- New preprint: [REVS: Unlearning Sensitive Information in Language Models via Rank Editing in the Vocabulary Space](https://technion-cs-nlp.github.io/REVS/)
+
 **April 2024.**
-- [Croatian only] I gave a brief interview on Large Language Models on the Croatian radio show "Prozor u Digitalno". You can check out the recording for the 30th of April [here](https://radio.hrt.hr/slusaonica/prozor-u-digitalno)
+- [Croatian] I gave a brief interview on Large Language Models on the Croatian radio show "Prozor u Digitalno". You can check out the recording for the 30th of April [[here]](https://radio.hrt.hr/slusaonica/prozor-u-digitalno)
 
 **March 2024.**
-- I held a talk at the [CroAI](https://www.croai.org/) meetup, covering some recent works! Check out the [slides](https://docs.google.com/presentation/d/1RiIsuTzfxt7v8m2cVSsvXudKW-nPOE1Ss7gTIKYODF0/edit?usp=sharing)
+- I held a talk at the [CroAI](https://www.croai.org/) meetup, covering some recent works! Check out the [[slides]](https://docs.google.com/presentation/d/1RiIsuTzfxt7v8m2cVSsvXudKW-nPOE1Ss7gTIKYODF0/edit?usp=sharing)
 
 **February 2024.**
 - I'm area chairing the ARR February Interpretability and Analysis of Models for NLP track
