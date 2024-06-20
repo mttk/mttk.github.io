@@ -33,7 +33,3 @@ News
 - New preprint: [Code Prompting Elicits Conditional Reasoning Abilities in Text+Code LLMs](https://arxiv.org/abs/2401.10065)
 - [CATfOOD: Counterfactual Augmented Training for Improving Out-of-Domain Performance and Calibration](https://arxiv.org/abs/2309.07822) is accepted to [EACL 2024](https://2024.eacl.org/) main!
 - [BLOOD: Out-of-Distribution Detection by Leveraging Between-Layer Transformation Smoothness](https://arxiv.org/abs/2310.02832) is accepted to [ICLR 2024](https://iclr.cc/) as a poster!
-
-**December 2023.**
-- 🎄🎄🎄 **Happy holidays** 🎄🎄🎄
-- I'm area chairing the ARR December Interpretability and Analysis of Models for NLP track
