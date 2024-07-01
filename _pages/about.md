@@ -16,6 +16,10 @@ I am currently on the job market for academic opportunities. Check my [CV](https
 
 News
 ======
+
+**July 2024.**
+- I'm area chairing COLING and ARR June Interpretability and Explainability/Analysis of Models for NLP tracks 
+
 **June 2024.**
 - New preprint: [REVS: Unlearning Sensitive Information in Language Models via Rank Editing in the Vocabulary Space](https://technion-cs-nlp.github.io/REVS/)
 
