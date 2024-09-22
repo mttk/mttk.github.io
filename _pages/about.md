@@ -17,8 +17,8 @@ I am currently on the job market for academic opportunities. Check my [CV](https
 News
 ======
 
-**July 2024.**
-- I'm area chairing COLING and ARR June Interpretability and Explainability/Analysis of Models for NLP tracks 
+**September 2024.**
+- [Code Prompting Elicits Conditional Reasoning Abilities in Text+Code LLMs](https://arxiv.org/abs/2401.10065) is accepted to [EMNLP 2024](https://2024.emnlp.org/) main!
 
 **June 2024.**
 - New preprint: [REVS: Unlearning Sensitive Information in Language Models via Rank Editing in the Vocabulary Space](https://technion-cs-nlp.github.io/REVS/)
@@ -27,7 +27,6 @@ News
 - I held a talk at the [CroAI](https://www.croai.org/) meetup, covering some recent works! Check out the [[slides]](https://docs.google.com/presentation/d/1RiIsuTzfxt7v8m2cVSsvXudKW-nPOE1Ss7gTIKYODF0/edit?usp=sharing)
 
 **February 2024.**
-- I'm area chairing the ARR February Interpretability and Analysis of Models for NLP track
 - I started as a postdoc at [Technion](https://www.technion.ac.il/en/home-2/), working with [Yonatan Belinkov](https://belinkov.com/)
 
 **January 2024.**
