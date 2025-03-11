@@ -17,6 +17,10 @@ I am currently on the job market for academic opportunities. Check my [CV](https
 News
 ======
 
+**February 2025.**
+- New preprint: [Measuring Faithfulness of Chains of Thought by Unlearning Reasoning Steps](https://arxiv.org/abs/2502.14829)
+<!-- - I am substituting [Jan Šnajder](http://www.zemris.fer.hr/~jan/) at the University of Zagreb during the summer semester, teaching Introduction to AI. -->
+
 **September 2024.**
 - [Code Prompting Elicits Conditional Reasoning Abilities in Text+Code LLMs](https://arxiv.org/abs/2401.10065) is accepted to [EMNLP 2024](https://2024.emnlp.org/) main!
 
