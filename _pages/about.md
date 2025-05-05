@@ -8,18 +8,20 @@ redirect_from:
   - /about.html
 ---
 
-I'm a postdoc at Technion working with [Yonatan Belinkov](https://belinkov.com/). My research interests within natural language processing are interpretability, efficiency of prompting LLMs, LLM distillation and enforcing safety and faithfulness of (LLM-)generated texts.
+I'm a postdoc at [TakeLab](https://takelab.fer.hr/), the University of Zagreb, where I am substituting for [Jan Šnajder](http://www.zemris.fer.hr/~jan/) in the summer semester of 2025. My research interests within natural language processing are interpretability, efficiency of prompting LLMs, LLM distillation and enforcing safety and faithfulness of (LLM-)generated texts.
 
-Previously, I did a postdoc at the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at TU Darmstadt working on the [InterText](https://intertext.ukp-lab.de/) initiative, while I obtained my PhD at the University of Zagreb under supervision of [Jan Šnajder](http://www.zemris.fer.hr/~jan/). Before my PhD I worked at the European Commission's [Joint Research Centre](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/joint-research-centre_en) in Ispra on using NLP to update the the [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030).
+Previously, I did a postdoc at the Technion working with [Yonatan Belinkov](https://belinkov.com/) and the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at TU Darmstadt working on the [InterText](https://intertext.ukp-lab.de/) initiative. I obtained my PhD at the University of Zagreb under supervision of [Jan Šnajder](http://www.zemris.fer.hr/~jan/). Before my PhD I worked at the European Commission's [Joint Research Centre](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/joint-research-centre_en) in Ispra on using NLP to update the the [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030).
 
 I am currently on the job market for academic opportunities. Check my [CV](https://mttk.github.io/files/CV_Tutek_Martin_Mar_2024.pdf) and [reach out](https://mttk.github.io/contact/) if you believe me a good fit.
 
 News
 ======
+**April 2025.**
+- We released [a Mechanistic Interpretability Benchmark](https://mib-bench.github.io/), a step towards standardizing evaluation in mechanistic interpretability! The paper describing our effort has been accepted to [ICML 2025](https://icml.cc/).
 
 **February 2025.**
 - New preprint: [Measuring Faithfulness of Chains of Thought by Unlearning Reasoning Steps](https://arxiv.org/abs/2502.14829)
-<!-- - I am substituting [Jan Šnajder](http://www.zemris.fer.hr/~jan/) at the University of Zagreb during the summer semester, teaching Introduction to AI. -->
+- I am substituting [Jan Šnajder](http://www.zemris.fer.hr/~jan/) at the University of Zagreb during the summer semester, teaching [Introduction to AI](https://www.fer.unizg.hr/en/course/itai).
 
 **September 2024.**
 - [Code Prompting Elicits Conditional Reasoning Abilities in Text+Code LLMs](https://arxiv.org/abs/2401.10065) is accepted to [EMNLP 2024](https://2024.emnlp.org/) main!
