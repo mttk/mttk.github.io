@@ -16,6 +16,9 @@ I am currently on the job market for academic opportunities. Check my [CV](https
 
 News
 ======
+**May 2025.**
+- [REVS: Unlearning Sensitive Information in Language Models via Rank Editing in the Vocabulary Space](https://technion-cs-nlp.github.io/REVS/) has been accepted to the Findings of ACL 2025!
+
 **April 2025.**
 - We released [a Mechanistic Interpretability Benchmark](https://mib-bench.github.io/), a step towards standardizing evaluation in mechanistic interpretability! The paper describing our effort has been accepted to [ICML 2025](https://icml.cc/).
 
