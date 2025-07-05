@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a postdoc at [TakeLab](https://takelab.fer.hr/), the University of Zagreb. My research interests within natural language processing are faithful explainability, safety and controllability of language models.
+I'm a postdoc at [TakeLab](https://takelab.fer.hr/), University of Zagreb. My research interests within natural language processing are faithful explainability, safety and controllability of language models.
 
 Previously, I did a postdoc at the Technion working with [Yonatan Belinkov](https://belinkov.com/) working on unlearning and faithful explainability of language models. Before that, I did a postdoc at the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at TU Darmstadt working with [Iryna Gurevych](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp) on the [InterText](https://intertext.ukp-lab.de/) initiative. I obtained my PhD at the University of Zagreb under supervision of [Jan Šnajder](http://www.zemris.fer.hr/~jan/). Before my PhD I worked at the European Commission's [Joint Research Centre](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/joint-research-centre_en) in Ispra on using NLP to update the the [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030).
 
