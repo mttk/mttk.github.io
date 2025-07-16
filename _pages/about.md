@@ -17,13 +17,13 @@ I am on the job market for academic opportunities. Check my [CV](https://mttk.gi
 News
 ======
 **May 2025.**
-- REVS, our gradient-free method for erasing sensitive information from language models has been accepted to the [Findings of ACL 2025](https://2025.aclweb.org/)! [[paper & code]](https://technion-cs-nlp.github.io/REVS/)
+- REVS, our gradient-free method for erasing sensitive information from language models has been accepted to the [Findings of ACL 2025](https://2025.aclweb.org/)! Check out the [[paper & code]](https://technion-cs-nlp.github.io/REVS/)
 
 **April 2025.**
 - We released [a Mechanistic Interpretability Benchmark](https://mib-bench.github.io/), a step towards standardizing evaluation in mechanistic interpretability! The paper describing our effort has been accepted to [ICML 2025](https://icml.cc/).
 
 **February 2025.**
-- We released a new preprint describing a parametric method of estimating faithfulness of CoTs [[paper]](https://arxiv.org/abs/2502.14829)
+- We released a new preprint describing a parametric method of estimating faithfulness of CoTs! Check out the preprint: [[paper]](https://arxiv.org/abs/2502.14829)
 - I am substituting [Jan Šnajder](http://www.zemris.fer.hr/~jan/) at the University of Zagreb during the summer semester, teaching [Introduction to AI](https://www.fer.unizg.hr/en/course/itai).
 
 **September 2024.**
