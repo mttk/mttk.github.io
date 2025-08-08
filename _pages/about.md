@@ -12,10 +12,13 @@ I'm a postdoc at [TakeLab](https://takelab.fer.hr/), University of Zagreb. My re
 
 Previously, I did a postdoc at the Technion working with [Yonatan Belinkov](https://belinkov.com/) working on unlearning and faithful explainability of language models. Before that, I did a postdoc at the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at TU Darmstadt working with [Iryna Gurevych](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp) on the [InterText](https://intertext.ukp-lab.de/) initiative. I obtained my PhD at the University of Zagreb under supervision of [Jan Šnajder](http://www.zemris.fer.hr/~jan/). Before my PhD I worked at the European Commission's [Joint Research Centre](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/joint-research-centre_en) in Ispra on using NLP to update the the [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030).
 
-I am on the job market for academic opportunities. Check my [CV](https://mttk.github.io/files/CV_Tutek_Martin_May_2025.pdf) and [reach out](https://mttk.github.io/contact/) if you believe me a good fit.
+I am on the job market for academic opportunities. Check my [CV](https://mttk.github.io/files/CV_Tutek_Martin_Aug_2025.pdf) and [reach out](https://mttk.github.io/contact/) if you believe me a good fit.
 
 News
 ======
+**July 2025.**
+- Two papers will be presented at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025: FUR as non-archival [[paper]](https://arxiv.org/abs/2502.14829), and Predicting Success of Model Editing via Intrinsic Features as archival! Stay tuned for the CR version :)
+
 **June 2025.**
 - Our paper studying diachronic word embeddings trained on Croatian has been accepted to the [Slavic NLP workshop](https://bsnlp.cs.helsinki.fi/index.html) at ACL 2025! Check out our [[paper]](https://arxiv.org/abs/2506.13569).
 
