@@ -32,12 +32,5 @@ News
 **April 2025.**
 - We released [a Mechanistic Interpretability Benchmark](https://mib-bench.github.io/), a step towards standardizing evaluation in mechanistic interpretability! The paper describing our effort has been accepted to [ICML 2025](https://icml.cc/).
 
-**February 2025.**
-- We released a new preprint describing a parametric method of estimating faithfulness of CoTs! Check out the preprint: [[paper]](https://arxiv.org/abs/2502.14829).
-- I am substituting [Jan Šnajder](http://www.zemris.fer.hr/~jan/) at the University of Zagreb during the summer semester, teaching [Introduction to AI](https://www.fer.unizg.hr/en/course/itai).
-
 **September 2024.**
 - Our paper on prompting models with pseudocode to improve their conditional reasoning capabilities is accepted to [EMNLP 2024](https://2024.emnlp.org/) main! Check out the [[paper]](https://arxiv.org/abs/2401.10065) 
-
-**February 2024.**
-- I started as a postdoc at [Technion](https://www.technion.ac.il/en/home-2/), working with [Yonatan Belinkov](https://belinkov.com/)
