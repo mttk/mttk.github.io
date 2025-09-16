@@ -17,7 +17,7 @@ I am on the job market for academic opportunities. Check my [CV](https://mttk.gi
 News
 ======
 **August 2025.**
-- FUR was accepted at [EMNLP 2025](https://2025.emnlp.org/) main, and as an oral at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025! Check out the [[paper]](https://arxiv.org/abs/2502.14829).
+- FUR was accepted as an oral at [EMNLP 2025](https://2025.emnlp.org/) main, and (non-archival) at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025! Check out the [[paper]](https://arxiv.org/abs/2502.14829).
 - We released a new preprint on using SAEs to precisely & permanently erase harmful concepts from LMs! Check out the preprint: [[paper]](https://arxiv.org/abs/2508.13650).
 
 **July 2025.**
