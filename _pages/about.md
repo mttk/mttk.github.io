@@ -16,12 +16,18 @@ I am on the job market for academic opportunities. Check my [CV](https://mttk.gi
 
 News
 ======
+**October 2025.**
+- We released a benchmark evaluating whether LLM agents are safe for use in managerial decisions. Check out the [[paper & data]](https://technion-cs-nlp.github.io/ManagerBench-website/)!
+
+**September 2025.**
+- We released a new preprint on directly encoding contextual information into adapter parameters in a compositional manner! Check out the [[paper]](https://arxiv.org/abs/2509.22158)
+
 **August 2025.**
 - FUR was accepted as an oral at [EMNLP 2025](https://2025.emnlp.org/) main, and (non-archival) at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025! Check out the [[paper]](https://arxiv.org/abs/2502.14829).
 - We released a new preprint on using SAEs to precisely & permanently erase harmful concepts from LMs! Check out the preprint: [[paper]](https://arxiv.org/abs/2508.13650).
 
 **July 2025.**
-- Two papers will be presented at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025: FUR as non-archival [[paper]](https://arxiv.org/abs/2502.14829), and Predicting Success of Model Editing via Intrinsic Features as archival! Stay tuned for the CR version :)
+- Two papers will be presented at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025: FUR as non-archival [[paper]](https://arxiv.org/abs/2502.14829), and [Predicting Success of Model Editing via Intrinsic Features](https://openreview.net/pdf?id=qQNiXK0U0J) as archival!
 
 **June 2025.**
 - Our paper studying diachronic word embeddings trained on Croatian has been accepted to the [Slavic NLP workshop](https://bsnlp.cs.helsinki.fi/index.html) at ACL 2025! Check out our [[paper]](https://arxiv.org/abs/2506.13569).
