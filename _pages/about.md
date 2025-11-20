@@ -16,6 +16,11 @@ I am on the job market for academic opportunities. Check my [CV](https://mttk.gi
 
 News
 ======
+
+**November 2025.** 
+- FUR has received an **outstanding paper** award at EMNLP 2025! If you haven't yet, read our [paper](https://aclanthology.org/2025.emnlp-main.504/) on using parametric interventions to measure CoT faithfulness!
+- Our work presenting a benchmark investigating the capacity of LLMs to track and model local world states in conversations has been accepted to [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) as an oral! Check out the [paper](https://arxiv.org/abs/2511.13021)! 
+
 **October 2025.**
 - We released a benchmark evaluating whether LLM agents are safe for use in managerial decisions. Check out the [[paper & data]](https://technion-cs-nlp.github.io/ManagerBench-website/)!
 
@@ -23,11 +28,10 @@ News
 - We released a new preprint on directly encoding contextual information into adapter parameters in a compositional manner! Check out the [[paper]](https://arxiv.org/abs/2509.22158)
 
 **August 2025.**
-- FUR was accepted as an oral at [EMNLP 2025](https://2025.emnlp.org/) main, and (non-archival) at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025! Check out the [[paper]](https://arxiv.org/abs/2502.14829).
 - We released a new preprint on using SAEs to precisely & permanently erase harmful concepts from LMs! Check out the preprint: [[paper]](https://arxiv.org/abs/2508.13650).
 
 **July 2025.**
-- Two papers will be presented at the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025: FUR as non-archival [[paper]](https://arxiv.org/abs/2502.14829), and [Predicting Success of Model Editing via Intrinsic Features](https://openreview.net/pdf?id=qQNiXK0U0J) as archival!
+- [Predicting Success of Model Editing via Intrinsic Features](https://openreview.net/pdf?id=qQNiXK0U0J) is accepted to the [Interplay workshop](https://interplay-workshop.github.io/) at COLM 2025!
 
 **June 2025.**
 - Our paper studying diachronic word embeddings trained on Croatian has been accepted to the [Slavic NLP workshop](https://bsnlp.cs.helsinki.fi/index.html) at ACL 2025! Check out our [[paper]](https://arxiv.org/abs/2506.13569).
@@ -37,6 +41,3 @@ News
 
 **April 2025.**
 - We released [a Mechanistic Interpretability Benchmark](https://mib-bench.github.io/), a step towards standardizing evaluation in mechanistic interpretability! The paper describing our effort has been accepted to [ICML 2025](https://icml.cc/).
-
-**September 2024.**
-- Our paper on prompting models with pseudocode to improve their conditional reasoning capabilities is accepted to [EMNLP 2024](https://2024.emnlp.org/) main! Check out the [[paper]](https://arxiv.org/abs/2401.10065) 
